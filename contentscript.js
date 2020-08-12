@@ -1,5 +1,11 @@
 let hasCheckedForOverflowHidden = false;
 
+const log = (msg) => {
+  if (!("update_url" in chrome.runtime.getManifest())) {
+    console.log(msg);
+  }
+};
+
 const checkOverflowHidden = () => {
   if (hasCheckedForOverflowHidden) {
     return;
@@ -34,7 +40,7 @@ const checkOverflowHiddenEl = (el) => {
     computedStyle.getPropertyValue("overflow-x") === "hidden" ||
     computedStyle.getPropertyValue("overflow-y") === "hidden"
   ) {
-    console.log("Setting " + el + " to visible");
+    log("Setting " + el + " to visible");
     e.style["overflow"] = "visible";
   }
 };
@@ -42,7 +48,7 @@ const checkOverflowHiddenEl = (el) => {
 const setElementsToRemove = (elementsToRemove) => {
   elementsToRemove.forEach((el) => {
     document.arrive(el, { onceOnly: true }, (e) => {
-      console.log("Removing " + el);
+      log("Removing " + el);
       e.remove();
       checkOverflowHidden();
     });
@@ -116,14 +122,14 @@ const run = (rules) => {
 
     for (let i = 0; i < matches.length; i++) {
       if (isURLMatched(window.location.toString(), matches[i])) {
-        console.log("Found match for " + r + " on " + matches[i]);
+        log("Found match for " + r + " on " + matches[i]);
         setElementsToRemove(rules[r]["elementsToRemove"]);
         return;
       }
     }
   }
 
-  console.log("No match found");
+  log("No match found");
 };
 
 fetch(chrome.runtime.getURL("rules.json"))

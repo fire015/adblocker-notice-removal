@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "AdBlock Notice Removal",
+    "name": "Ad Blocker Notice Removal",
     "version": "1.0.0",
     "author": "Jason M",
-    "description": "Remove the adblock notice on popular sites",
+    "description": "Remove the ad blocker notice on popular sites",
     "minimum_chrome_version": "52",
     "content_scripts": [
       {
@@ -11,6 +11,15 @@
         "js": ["arrive.min.js", "contentscript.js"],
         "run_at": "document_start"
       }
+    ],
+    "background": {
+      "scripts": ["menu.js"]
+    },
+    "browser_action": {
+      "default_title": "Ad Blocker Notice Removal"
+    },
+    "permissions": [
+      "contextMenus"
     ],
     "web_accessible_resources": [
       "rules.json"
