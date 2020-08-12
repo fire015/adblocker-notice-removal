@@ -33,8 +33,8 @@ Each object requires a `matches` array and an `elementsToRemove` array.
 
 The `matches` array does a pattern match against the current URL.
 
-Example: `foo.com` will match `https://www.foo.com` and `https://news.foo.com`
-Example: `www.foo.com` will match `https://www.foo.com` but not `https://news.foo.com`
-Example: `www.foo.com/bar` will match `https://www.foo.com/bar/xyz` but not `https://www.foo.com/xyz`
+- Example: `foo.com` will match `https://www.foo.com` and `https://news.foo.com`
+- Example: `www.foo.com` will match `https://www.foo.com` but not `https://news.foo.com`
+- Example: `www.foo.com/bar` will match `https://www.foo.com/bar/xyz` but not `https://www.foo.com/xyz`
 
 The `elementsToRemove` array takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors) such as `.class` or `#id` to remove.
