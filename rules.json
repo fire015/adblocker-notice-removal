@@ -1,4 +1,13 @@
 {
+    "cnn": {
+        "matches": [
+            "cnn.com"
+        ],
+        "elementsToRemove": [
+            "[class^='sp_veil']",
+            "[class^='sp_message_container']"
+        ]
+    },
     "dmgmedia": {
         "matches": [
             "www.dailymail.co.uk",
@@ -10,12 +19,40 @@
             ".wrapper-3AzfF"
         ]
     },
+    "forbes": {
+        "matches": [
+            "www.forbes.com"
+        ],
+        "elementsToRemove": [
+            ".tp-modal"
+        ]
+    },
     "independent": {
         "matches": [
             "www.independent.co.uk"
         ],
         "elementsToRemove": [
             ".tp-modal"
+        ]
+    },
+    "insider": {
+        "matches": [
+            "www.insider.com",
+            "www.businessinsider.com"
+        ],
+        "elementsToRemove": [
+            ".tp-modal"
+        ]
+    },
+    "nbcuniversal": {
+        "matches": [
+            "www.msnbc.com",
+            "www.today.com",
+            "www.nbcnews.com",
+            "www.cnbc.com"
+        ],
+        "elementsToRemove": [
+            "div[style*='z-index: 2147483647']"
         ]
     },
     "medianewsgroup": {

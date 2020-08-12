@@ -47,12 +47,25 @@ const checkOverflowHiddenEl = (el) => {
 
 const setElementsToRemove = (elementsToRemove) => {
   elementsToRemove.forEach((el) => {
-    document.arrive(el, { onceOnly: true }, (e) => {
-      log("Removing " + el);
-      e.remove();
-      checkOverflowHidden();
-    });
+    document.arrive(el, { onceOnly: true }, (e) => removeElement(el, e, 0));
   });
+};
+
+const removeElement = (el, e, attempts) => {
+  if (attempts === 25) {
+    return;
+  }
+
+  const computedStyle = window.getComputedStyle(e);
+
+  if (computedStyle.getPropertyValue("display") === "none") {
+    setTimeout(() => removeElement(el, e, attempts + 1), 200);
+    return;
+  }
+
+  log("Removing " + el);
+  e.remove();
+  checkOverflowHidden();
 };
 
 const isURLMatched = (url, urlTemplate) => {
