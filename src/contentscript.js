@@ -41,7 +41,7 @@ const checkOverflowHiddenEl = (el) => {
     computedStyle.getPropertyValue("overflow-y") === "hidden"
   ) {
     log("Setting " + el + " to visible");
-    e.style["overflow"] = "visible";
+    e.style.cssText = "overflow: visible !important";
   }
 };
 

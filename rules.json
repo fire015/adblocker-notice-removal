@@ -24,7 +24,8 @@
             "www.forbes.com"
         ],
         "elementsToRemove": [
-            ".tp-modal"
+            ".tp-modal",
+            ".tp-backdrop"
         ]
     },
     "independent": {
@@ -32,7 +33,8 @@
             "www.independent.co.uk"
         ],
         "elementsToRemove": [
-            ".tp-modal"
+            ".tp-modal",
+            ".tp-backdrop"
         ]
     },
     "insider": {
@@ -41,7 +43,8 @@
             "www.businessinsider.com"
         ],
         "elementsToRemove": [
-            ".tp-modal"
+            ".tp-modal",
+            ".tp-backdrop"
         ]
     },
     "nbcuniversal": {
