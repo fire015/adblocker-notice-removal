@@ -1,0 +1,12 @@
+{
+  "name": "adblocker-notice-removal",
+  "description": "Build scripts for Ad Blocker Notice Removal",
+  "private": true,
+  "scripts": {
+    "zip": "node tasks/zip.js --run"
+  },
+  "devDependencies": {
+    "archiver": "^5.0.0",
+    "chrome-webstore-upload": "^0.2.2"
+  }
+}
