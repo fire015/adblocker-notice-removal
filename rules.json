@@ -28,6 +28,40 @@
       ".tp-backdrop"
     ]
   },
+  "hearst": {
+    "matches": [
+      "www.sfchronicle.com",
+      "www.houstonchronicle.com"
+    ],
+    "elementsToRemove": [
+      ".fancybox-wrap",
+      ".fancybox-overlay"
+    ]
+  },
+  "hearst-2": {
+    "matches": [
+      "www.chron.com",
+      "www.newstimes.com",
+      "www.greenwichtime.com",
+      "www.stamfordadvocate.com",
+      "www.ctpost.com",
+      "www.middletownpress.com",
+      "www.nhregister.com",
+      "www.thehour.com",
+      "www.thetelegraph.com",
+      "www.theintelligencer.com",
+      "www.myjournalcourier.com",
+      "www.michigansthumb.com",
+      "www.ourmidland.com",
+      "www.timesunion.com",
+      "www.lmtonline.com",
+      "www.myplainview.com",
+      "www.expressnews.com"
+    ],
+    "elementsToRemove": [
+      "div[style*='z-index: 2147483647']"
+    ]
+  },
   "ign": {
     "matches": [
       "www.ign.com"
@@ -63,9 +97,36 @@
       ".fc-ab-root"
     ]
   },
-  "miamiherald": {
+  "mcclatchy": {
     "matches": [
-      "www.miamiherald.com"
+      "www.bnd.com",
+      "www.bellinghamherald.com",
+      "www.bradenton.com",
+      "www.centredaily.com",
+      "www.charlotteobserver.com",
+      "www.ledger-enquirer.com",
+      "www.fresnobee.com",
+      "www.heraldonline.com",
+      "www.heraldsun.com",
+      "www.idahostatesman.com",
+      "www.islandpacket.com",
+      "www.kansas.com",
+      "www.kansascity.com",
+      "www.kentucky.com",
+      "www.miamiherald.com",
+      "www.elnuevoherald.com",
+      "www.modbee.com",
+      "www.newsobserver.com",
+      "www.theolympian.com",
+      "www.sacbee.com",
+      "www.star-telegram.com",
+      "www.thestate.com",
+      "www.sunherald.com",
+      "www.myrtlebeachonline.com",
+      "www.thenewstribune.com",
+      "www.macon.com",
+      "www.sanluisobispo.com",
+      "www.tri-cityherald.com"
     ],
     "elementsToRemove": [
       ".fc-ab-root"
@@ -180,6 +241,14 @@
     "elementsToRemove": [
       ".modal-scrollable",
       ".connext-modal-backdrop"
+    ]
+  },
+  "tampabay": {
+    "matches": [
+      "www.tampabay.com"
+    ],
+    "elementsToRemove": [
+      ".Mg2-connext"
     ]
   }
 }
