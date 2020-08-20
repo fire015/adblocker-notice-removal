@@ -55,6 +55,22 @@
       ".tp-backdrop"
     ]
   },
+  "latimes": {
+    "matches": [
+      "www.latimes.com"
+    ],
+    "elementsToRemove": [
+      ".fc-ab-root"
+    ]
+  },
+  "miamiherald": {
+    "matches": [
+      "www.miamiherald.com"
+    ],
+    "elementsToRemove": [
+      ".fc-ab-root"
+    ]
+  },
   "nbcuniversal": {
     "matches": [
       "www.msnbc.com",
