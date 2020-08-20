@@ -2,7 +2,7 @@
 
 Chrome extension to remove the ad blocker notice on popular sites.
 
-Install from the Chrome Web Store.
+Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/ad-blocker-notice-removal/bnohpbaeckhhfnfijdnapgmbldkigchl).
 
 Icons made by [DinosoftLabs](https://www.flaticon.com/authors/dinosoftlabs).
 
@@ -18,7 +18,7 @@ If you are comfortable with Javascript, you can add it to the rules file and cre
 2. Clone the forked repository locally
 3. From the `master` branch, create and checkout a new feature branch to work upon
 4. Click the 'Load unpacked' button in chrome://extensions and choose the folder
-5. Make changes and click the 'Update' button once saved
+5. Make your changes and test them
 6. Push the changes to your github repository
 7. Submit a pull request from your repo back to the original repository
 8. Once it is accepted, a new update will be published to the Chrome Web Store
@@ -40,3 +40,5 @@ The `matches` array does a pattern match against the current URL.
 - Example: `www.foo.com/bar` will match `https://www.foo.com/bar/xyz` but not `https://www.foo.com/xyz`
 
 The `elementsToRemove` array takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors) such as `.class` or `#id` to remove.
+
+If you make a change to the `rules.json` file and submit a pull request, please also bump the version in the `manifest.json` file.
