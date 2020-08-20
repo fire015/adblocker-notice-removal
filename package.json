@@ -3,7 +3,9 @@
   "description": "Build scripts for Ad Blocker Notice Removal",
   "private": true,
   "scripts": {
-    "zip": "node tasks/zip.js --run"
+    "zip": "node tasks/zip.js",
+    "publish": "node tasks/publish.js",
+    "release": "npm run zip && npm run publish"
   },
   "devDependencies": {
     "archiver": "^5.0.0",
