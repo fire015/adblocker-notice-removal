@@ -42,3 +42,5 @@ The `matches` array does a pattern match against the current URL.
 The `elementsToRemove` array takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors) such as `.class` or `#id` to remove.
 
 If you make a change to the `rules.json` file and submit a pull request, please also bump the version in the `manifest.json` file.
+
+Thanks for your contribution!
