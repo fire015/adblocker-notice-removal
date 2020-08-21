@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "archiver": "^5.0.0",
-    "chrome-webstore-upload": "^0.2.2"
+    "chrome-webstore-upload": "^0.3.0"
   }
 }
