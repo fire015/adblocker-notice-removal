@@ -1,17 +1,12 @@
 name: Release to Chrome Web Store
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'manifest.json'
+on: [workflow_dispatch]
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Zip and publish
+      - name: Zip file
         uses: actions/setup-node@v1
         with:
           node-version: '12'
