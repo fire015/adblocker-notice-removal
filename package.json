@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "zip": "node tasks/zip.js",
-    "publish": "node tasks/publish.js",
-    "release": "npm run zip && npm run publish"
+    "publish": "node tasks/publish.js"
   },
   "devDependencies": {
     "archiver": "^5.0.0",

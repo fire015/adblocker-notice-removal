@@ -10,11 +10,26 @@ const publishFile = async () => {
   return new Promise(async (resolve) => {
     const token = await webStore.fetchToken();
     const file = __dirname + "/../build.zip";
-    await webStore.uploadExisting(fs.createReadStream(file), token);
-    await webStore.publish("default", token);
-    fs.unlink(file);
-    resolve();
+    await uploadFile(file, token);
+    await publishExtension(token);
+    fs.unlink(file, resolve);
   });
+};
+
+const uploadFile = async (file, token) => {
+  const res = await webStore.uploadExisting(fs.createReadStream(file), token);
+
+  if (!res.uploadState || res.uploadState !== "SUCCESS") {
+    throw new Error("Upload failed, response was: " + JSON.stringify(res));
+  }
+};
+
+const publishExtension = async (token) => {
+  const res = await webStore.publish("default", token);
+
+  if (!res.status || res.status.length === 0 || res.status[0] !== "OK") {
+    throw new Error("Publish failed, response was: " + JSON.stringify(res));
+  }
 };
 
 console.log("Publishing file...");
