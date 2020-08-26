@@ -17,3 +17,5 @@ jobs:
         with:
           name: build-file
           path: build.zip
+      - name: Publish file
+        run: npm run publish
