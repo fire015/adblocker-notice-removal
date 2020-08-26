@@ -6,12 +6,18 @@ const log = (msg) => {
   }
 };
 
+const showBadge = () => {
+  chrome.runtime.sendMessage({ action: "showBadge" });
+};
+
 const checkOverflowHidden = () => {
   if (hasCheckedForOverflowHidden) {
     return;
   }
 
   hasCheckedForOverflowHidden = true;
+  showBadge();
+
   let timesRun = 0;
 
   const interval = setInterval(() => {
