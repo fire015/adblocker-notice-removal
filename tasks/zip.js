@@ -21,4 +21,9 @@ const zipDirectory = async () => {
 };
 
 console.log("Zipping in progress...");
-zipDirectory().then(() => console.log("Zip file created"));
+zipDirectory()
+  .then(() => console.log("Zip file created"))
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });

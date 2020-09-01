@@ -33,4 +33,9 @@ const publishExtension = async (token) => {
 };
 
 console.log("Publishing file...");
-publishFile().then(() => console.log("Zip file published"));
+publishFile()
+  .then(() => console.log("Zip file published"))
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
