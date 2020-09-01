@@ -7,12 +7,16 @@ const webStore = require("chrome-webstore-upload")({
 });
 
 const publishFile = async () => {
-  return new Promise(async (resolve) => {
-    const token = await webStore.fetchToken();
-    const file = __dirname + "/../build.zip";
-    await uploadFile(file, token);
-    await publishExtension(token);
-    fs.unlink(file, resolve);
+  return new Promise(async (resolve, reject) => {
+    try {
+      const token = await webStore.fetchToken();
+      const file = __dirname + "/../build.zip";
+      await uploadFile(file, token);
+      await publishExtension(token);
+      fs.unlink(file, resolve);
+    } catch (err) {
+      reject(err);
+    }
   });
 };
 
