@@ -1,8 +1,10 @@
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.contextMenus.create({
-    id: "report",
-    title: "Report issue with website",
-    contexts: ["browser_action"],
+  chrome.contextMenus.removeAll(() => {
+    chrome.contextMenus.create({
+      id: "report",
+      title: "Report issue with website",
+      contexts: ["browser_action"],
+    });
   });
 });
 
