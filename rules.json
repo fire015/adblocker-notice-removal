@@ -11,6 +11,7 @@
   "dmgmedia": {
     "matches": [
       "www.dailymail.co.uk",
+      "www.mailonsunday.co.uk",
       "metro.co.uk"
     ],
     "elementsToRemove": [
