@@ -251,5 +251,14 @@
     "elementsToRemove": [
       ".Mg2-connext"
     ]
+  },
+  "investing": {
+    "matches": [
+      "www.investing.com",
+      "investing.com"
+    ],
+    "elementsToRemove": [
+      "#abPopup"
+    ]
   }
 }
