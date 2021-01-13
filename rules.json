@@ -259,5 +259,13 @@
     "elementsToRemove": [
       "#abPopup"
     ]
+  },
+  "nu": {
+    "matches": [
+      "nu.nl"
+    ],
+    "elementsToRemove": [
+      ".adblocker"
+    ]
   }
 }
