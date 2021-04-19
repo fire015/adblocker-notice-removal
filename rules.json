@@ -257,7 +257,9 @@
       "investing.com"
     ],
     "elementsToRemove": [
-      "#abPopup"
+      "#abPopup",
+      "div[class*='adBlock-popup_popup--adblock-detected']",
+      "#__next>div[class*=overlay_overlay]"
     ]
   },
   "nu": {
