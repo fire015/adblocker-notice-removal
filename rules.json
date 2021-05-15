@@ -98,6 +98,18 @@
       ".fc-ab-root"
     ]
   },
+  "lifesavvymedia": {
+    "matches": [
+      "www.howtogeek.com",
+      "www.reviewgeek.com",
+      "www.lifesavvy.com",
+      "www.cloudsavvyit.com",
+      "www.mindbounce.com"
+    ],
+    "elementsToRemove": [
+      ".fEy1Z2XT"
+    ]
+  },
   "mcclatchy": {
     "matches": [
       "www.bnd.com",
