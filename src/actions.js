@@ -1,10 +1,11 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "showBadge") {
-    chrome.browserAction.setBadgeBackgroundColor({ color: "#6b6b6b" });
-    chrome.browserAction.setBadgeText({ text: "✓" });
-
-    setTimeout(() => {
-      chrome.browserAction.setBadgeText({ text: "" });
-    }, 3000);
+    chrome.action.setBadgeBackgroundColor({ color: "#6b6b6b" });
+    chrome.action.setBadgeText({ text: "✓" });
+    chrome.alarms.create({ when: Date.now() + 3000 });
   }
+});
+
+chrome.alarms.onAlarm.addListener(() => {
+  chrome.action.setBadgeText({ text: "" });
 });

@@ -14,6 +14,7 @@ const zipDirectory = async () => {
     archive.pipe(output);
     archive.directory(root + "/icon", "icon");
     archive.directory(root + "/src", "src");
+    archive.file(root + "/background.js", { name: "background.js" });
     archive.file(root + "/manifest.json", { name: "manifest.json" });
     archive.file(root + "/rules.json", { name: "rules.json" });
     archive.finalize();

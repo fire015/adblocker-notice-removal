@@ -7,6 +7,7 @@
     "publish": "node tasks/publish.js"
   },
   "devDependencies": {
+    "@types/chrome": "0.0.146",
     "archiver": "^5.0.0",
     "chrome-webstore-upload": "^0.4.0"
   }
