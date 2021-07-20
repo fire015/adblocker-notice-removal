@@ -434,6 +434,18 @@
       ".tp-backdrop"
     ]
   },
+  "jpimedia": {
+    "matches": [
+      "www.scotsman.com",
+      "www.thestar.co.uk",
+      "www.yorkshirepost.co.uk",
+      "www.newsletter.co.uk"
+    ],
+    "elementsToRemove": [
+      ".tp-modal",
+      ".tp-backdrop"
+    ]
+  },
   "latimes": {
     "matches": [
       "www.latimes.com"
