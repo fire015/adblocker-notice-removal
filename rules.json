@@ -637,5 +637,14 @@
     "elementsToRemove": [
       ".adblocker"
     ]
+  },
+  "weather": {
+    "matches": [
+      "weather.com"
+    ],
+    "elementsToRemove": [
+      ".tp-modal",
+      ".tp-backdrop"
+    ]
   }
 }
