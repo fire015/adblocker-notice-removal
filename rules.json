@@ -512,6 +512,16 @@
       "div[style*='z-index: 2147483647']"
     ]
   },
+  "netaktion": {
+    "matches": [
+      "www.allmusic.com",
+      "www.allmovie.com",
+      "www.sidereel.com"
+    ],
+    "elementsToRemove": [
+      ".blocking-ads-modal"
+    ]
+  },
   "medianewsgroup": {
     "matches": [
       "www.chicoer.com",
