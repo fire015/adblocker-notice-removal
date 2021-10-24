@@ -412,6 +412,7 @@
       "www.ign.com"
     ],
     "elementsToRemove": [
+      ".fc-ab-root",
       ".fEy1Z2XT"
     ]
   },
