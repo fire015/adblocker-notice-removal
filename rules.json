@@ -649,6 +649,14 @@
       ".adblocker"
     ]
   },
+  "rottentomatoes": {
+    "matches": [
+      "www.rottentomatoes.com"
+    ],
+    "elementsToRemove": [
+      ".fEy1Z2XT"
+    ]
+  },
   "weather": {
     "matches": [
       "weather.com"
