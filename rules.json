@@ -631,6 +631,14 @@
       ".Mg2-connext"
     ]
   },
+  "tvtropes": {
+    "matches": [
+      "tvtropes.org"
+    ],
+    "elementsToRemove": [
+      ".adblockModal"
+    ]
+  },
   "investing": {
     "matches": [
       "investing.com"
