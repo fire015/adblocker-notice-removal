@@ -631,6 +631,14 @@
       ".Mg2-connext"
     ]
   },
+  "toptenz": {
+    "matches": [
+      "www.toptenz.net"
+    ],
+    "elementsToRemove": [
+      ".fEy1Z2XT"
+    ]
+  },
   "tvtropes": {
     "matches": [
       "tvtropes.org"
