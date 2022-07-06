@@ -435,6 +435,16 @@
       ".tp-backdrop"
     ]
   },
+  "investing": {
+    "matches": [
+      "investing.com"
+    ],
+    "elementsToRemove": [
+      "#abPopup",
+      "div[class*='adBlock-popup_popup--adblock-detected']",
+      "#__next>div[class*=overlay_overlay]"
+    ]
+  },
   "jpimedia": {
     "matches": [
       "www.scotsman.com",
@@ -500,27 +510,6 @@
     ],
     "elementsToRemove": [
       ".fc-ab-root"
-    ]
-  },
-  "nbcuniversal": {
-    "matches": [
-      "www.msnbc.com",
-      "www.today.com",
-      "www.nbcnews.com",
-      "www.cnbc.com"
-    ],
-    "elementsToRemove": [
-      "div[style*='z-index: 2147483647']"
-    ]
-  },
-  "netaktion": {
-    "matches": [
-      "www.allmusic.com",
-      "www.allmovie.com",
-      "www.sidereel.com"
-    ],
-    "elementsToRemove": [
-      ".blocking-ads-modal"
     ]
   },
   "medianewsgroup": {
@@ -623,6 +612,52 @@
       ".connext-modal-backdrop"
     ]
   },
+  "nbcuniversal": {
+    "matches": [
+      "www.msnbc.com",
+      "www.today.com",
+      "www.nbcnews.com",
+      "www.cnbc.com"
+    ],
+    "elementsToRemove": [
+      "div[style*='z-index: 2147483647']"
+    ]
+  },
+  "netaktion": {
+    "matches": [
+      "www.allmusic.com",
+      "www.allmovie.com",
+      "www.sidereel.com"
+    ],
+    "elementsToRemove": [
+      ".blocking-ads-modal"
+    ]
+  },
+  "nu": {
+    "matches": [
+      "nu.nl"
+    ],
+    "elementsToRemove": [
+      ".adblocker"
+    ]
+  },
+  "rottentomatoes": {
+    "matches": [
+      "www.rottentomatoes.com"
+    ],
+    "elementsToRemove": [
+      ".fEy1Z2XT"
+    ]
+  },
+  "sltrib": {
+    "matches": [
+      "www.sltrib.com"
+    ],
+    "elementsToRemove": [
+      ".tp-modal",
+      ".tp-backdrop"
+    ]
+  },
   "tampabay": {
     "matches": [
       "www.tampabay.com"
@@ -645,32 +680,6 @@
     ],
     "elementsToRemove": [
       ".adblockModal"
-    ]
-  },
-  "investing": {
-    "matches": [
-      "investing.com"
-    ],
-    "elementsToRemove": [
-      "#abPopup",
-      "div[class*='adBlock-popup_popup--adblock-detected']",
-      "#__next>div[class*=overlay_overlay]"
-    ]
-  },
-  "nu": {
-    "matches": [
-      "nu.nl"
-    ],
-    "elementsToRemove": [
-      ".adblocker"
-    ]
-  },
-  "rottentomatoes": {
-    "matches": [
-      "www.rottentomatoes.com"
-    ],
-    "elementsToRemove": [
-      ".fEy1Z2XT"
     ]
   },
   "weather": {
