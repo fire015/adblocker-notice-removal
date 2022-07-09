@@ -649,6 +649,14 @@
       ".fEy1Z2XT"
     ]
   },
+  "ruinmyweek": {
+    "matches": [
+      "ruinmyweek.com"
+    ],
+    "elementsToRemove": [
+      ".fEy1Z2XT"
+    ]
+  },
   "sltrib": {
     "matches": [
       "www.sltrib.com"
