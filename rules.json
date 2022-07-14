@@ -29,6 +29,15 @@
       ".tp-backdrop"
     ]
   },
+  "fox": {
+    "matches": [
+      "foxbusiness.com",
+      "foxnews.com"
+    ],
+    "elementsToRemove": [
+      ".fc-ab-root"
+    ]
+  },
   "gannett": {
     "matches": [
       "www.aberdeennews.com",
