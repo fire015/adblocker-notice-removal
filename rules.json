@@ -650,6 +650,14 @@
       ".adblocker"
     ]
   },
+  "onlysky": {
+    "matches": [
+      "onlysky.media"
+    ],
+    "elementsToRemove": [
+      ".fc-ab-root"
+    ]
+  },
   "rottentomatoes": {
     "matches": [
       "www.rottentomatoes.com"
