@@ -658,6 +658,14 @@
       ".fc-ab-root"
     ]
   },
+  "planetsport": {
+    "matches": [
+      "www.planetfootball.com"
+    ],
+    "elementsToRemove": [
+      ".unis"
+    ]
+  },
   "rottentomatoes": {
     "matches": [
       "www.rottentomatoes.com"
