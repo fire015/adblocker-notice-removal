@@ -691,6 +691,15 @@
       ".tp-backdrop"
     ]
   },
+  "spanishdict": {
+    "matches": [
+      "www.spanishdict.com",
+      "www.ingles.com"
+    ],
+    "elementsToRemove": [
+      ".ReactModal__Overlay ReactModal__Overlay--after-open"
+    ]
+  },
   "tampabay": {
     "matches": [
       "www.tampabay.com"
