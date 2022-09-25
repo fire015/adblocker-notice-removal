@@ -666,6 +666,17 @@
       ".unis"
     ]
   },
+  "rcsmediagroup": {
+    "matches": [
+      "www.expansion.com",
+      "www.telva.com",
+      "www.elmundo.es",
+      "www.marca.com"
+    ],
+    "elementsToRemove": [
+      ".fc-ab-root"
+    ]
+  },
   "rottentomatoes": {
     "matches": [
       "www.rottentomatoes.com"
