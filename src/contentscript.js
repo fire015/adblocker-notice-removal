@@ -74,77 +74,30 @@ const removeElement = (el, e, attempts) => {
   checkOverflowHidden();
 };
 
-const isURLMatched = (url, urlTemplate) => {
-  const regex = createUrlRegex(urlTemplate);
-  return Boolean(url.match(regex));
+const isURLMatched = (hostname, urlToMatch) => {
+  return hostname.slice(-urlToMatch.length) === urlToMatch;
 };
 
-// https://github.com/darkreader/darkreader/blob/master/src/utils/url.ts
-const createUrlRegex = (urlTemplate) => {
-  urlTemplate = urlTemplate.trim();
-  const exactBeginning = urlTemplate[0] === "^";
-  const exactEnding = urlTemplate[urlTemplate.length - 1] === "$";
-
-  urlTemplate = urlTemplate
-    .replace(/^\^/, "") // Remove ^ at start
-    .replace(/\$$/, "") // Remove $ at end
-    .replace(/^.*?\/{2,3}/, "") // Remove scheme
-    .replace(/\?.*$/, "") // Remove query
-    .replace(/\/$/, ""); // Remove last slash
-
-  let slashIndex;
-  let beforeSlash;
-  let afterSlash;
-
-  if ((slashIndex = urlTemplate.indexOf("/")) >= 0) {
-    beforeSlash = urlTemplate.substring(0, slashIndex); // google.*
-    afterSlash = urlTemplate.replace("$", "").substring(slashIndex); // /login/abc
-  } else {
-    beforeSlash = urlTemplate.replace("$", "");
+const removeWWW = (url) => {
+  if (url.substring(0, 4) === "www.") {
+    url = url.substr(4);
   }
 
-  // SCHEME and SUBDOMAINS
-  let result = exactBeginning
-    ? "^(.*?\\:\\/{2,3})?" // Scheme
-    : "^(.*?\\:\\/{2,3})?([^/]*?\\.)?"; // Scheme and subdomains
-
-  // HOST and PORT
-  const hostParts = beforeSlash.split(".");
-  result += "(";
-
-  for (let i = 0; i < hostParts.length; i++) {
-    if (hostParts[i] === "*") {
-      hostParts[i] = "[^\\.\\/]+?";
-    }
-  }
-
-  result += hostParts.join("\\.");
-  result += ")";
-
-  // PATH and QUERY
-  if (afterSlash) {
-    result += "(";
-    result += afterSlash.replace("/", "\\/");
-    result += ")";
-  }
-
-  result += exactEnding
-    ? "(\\/?(\\?[^/]*?)?)$" // All following queries
-    : "(\\/?.*?)$"; // All following paths and queries
-
-  return new RegExp(result, "i");
+  return url;
 };
 
 const run = (rules) => {
-  for (const r in rules) {
-    const matches = rules[r]["matches"];
+  const domain = removeWWW(window.location.hostname);
+  const key = domain.charAt(0);
+  const matches = rules["matches"][key];
 
-    for (let i = 0; i < matches.length; i++) {
-      if (isURLMatched(window.location.toString(), matches[i])) {
-        log("Found match for " + r + " on " + matches[i]);
-        setElementsToRemove(rules[r]["elementsToRemove"]);
-        return;
-      }
+  for (let i = 0; i < matches.length; i++) {
+    const [url, r] = matches[i];
+
+    if (isURLMatched(window.location.hostname, url)) {
+      log("Found match for " + r + " on " + url);
+      setElementsToRemove(rules["elementsToRemove"][r]);
+      return;
     }
   }
 
