@@ -1,4 +1,12 @@
 {
+  "ammanpatro.in": {
+    "matches": [
+      "www.ammanpatro.in"
+    ],
+    "elementsToRemove": [
+      ".ADs-BG"
+    ]
+  },
   "cnn": {
     "matches": [
       "cnn.com"
