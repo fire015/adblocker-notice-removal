@@ -33,7 +33,7 @@ The key of each object is unique and can contain multiple websites. Try to use t
 
 Each object requires a `matches` array and an `elementsToRemove` array.
 
-The `matches` array does a pattern match against the current hostname.
+The `matches` array contains the hostnames and each one is string compared from right to left against the current hostname.
 
 - Example: `foo.com` will match `https://www.foo.com` and `https://news.foo.com`
 - Example: `www.foo.com` will match `https://www.foo.com` but not `https://news.foo.com`
