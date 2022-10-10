@@ -5,7 +5,7 @@ const parseRules = (rules) => {
   for (const r in rules) {
     for (let i = 0; i < rules[r]["matches"].length; i++) {
       const hostname = rules[r]["matches"][i];
-      const key = removeWWW(hostname).charAt(0);
+      const key = stripSubdomain(hostname).charAt(0);
       const data = [hostname, r];
 
       if (key in matches) {
@@ -21,12 +21,13 @@ const parseRules = (rules) => {
   return { matches, elementsToRemove };
 };
 
-const removeWWW = (hostname) => {
-  if (hostname.substring(0, 4) === "www.") {
-    hostname = hostname.substr(4);
-  }
+const stripSubdomain = (hostname) => {
+  const parts = hostname.split(".");
 
-  return hostname;
+  return parts
+    .slice(0)
+    .slice(-(parts.length === 4 ? 3 : 2))
+    .join(".");
 };
 
 chrome.runtime.onInstalled.addListener(() => {

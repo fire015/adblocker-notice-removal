@@ -78,16 +78,17 @@ const isHostnameMatched = (hostname, hostnameToMatch) => {
   return hostname.slice(-hostnameToMatch.length) === hostnameToMatch;
 };
 
-const removeWWW = (hostname) => {
-  if (hostname.substring(0, 4) === "www.") {
-    hostname = hostname.substr(4);
-  }
+const stripSubdomain = (hostname) => {
+  const parts = hostname.split(".");
 
-  return hostname;
+  return parts
+    .slice(0)
+    .slice(-(parts.length === 4 ? 3 : 2))
+    .join(".");
 };
 
 const run = (rules) => {
-  const key = removeWWW(window.location.hostname).charAt(0);
+  const key = stripSubdomain(window.location.hostname).charAt(0);
   const matches = rules["matches"][key];
 
   for (let i = 0; i < matches.length; i++) {
