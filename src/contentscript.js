@@ -74,28 +74,27 @@ const removeElement = (el, e, attempts) => {
   checkOverflowHidden();
 };
 
-const isURLMatched = (hostname, urlToMatch) => {
-  return hostname.slice(-urlToMatch.length) === urlToMatch;
+const isHostnameMatched = (hostname, hostnameToMatch) => {
+  return hostname.slice(-hostnameToMatch.length) === hostnameToMatch;
 };
 
-const removeWWW = (url) => {
-  if (url.substring(0, 4) === "www.") {
-    url = url.substr(4);
+const removeWWW = (hostname) => {
+  if (hostname.substring(0, 4) === "www.") {
+    hostname = hostname.substr(4);
   }
 
-  return url;
+  return hostname;
 };
 
 const run = (rules) => {
-  const domain = removeWWW(window.location.hostname);
-  const key = domain.charAt(0);
+  const key = removeWWW(window.location.hostname).charAt(0);
   const matches = rules["matches"][key];
 
   for (let i = 0; i < matches.length; i++) {
-    const [url, r] = matches[i];
+    const [hostname, r] = matches[i];
 
-    if (isURLMatched(window.location.hostname, url)) {
-      log("Found match for " + r + " on " + url);
+    if (isHostnameMatched(window.location.hostname, hostname)) {
+      log("Found match for " + r + " on " + hostname);
       setElementsToRemove(rules["elementsToRemove"][r]);
       return;
     }
