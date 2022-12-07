@@ -36,6 +36,14 @@
       ".wrapper-3AzfF"
     ]
   },
+  "fancaps": {
+    "matches": [
+      "fancaps.net"
+    ],
+    "elementsToRemove": [
+      ".fEy1Z2XT"
+    ]
+  },
   "forbes": {
     "matches": [
       "www.forbes.com"
@@ -749,6 +757,14 @@
     ],
     "elementsToRemove": [
       ".adblockModal"
+    ]
+  },
+  "whatismyipaddress": {
+    "matches": [
+      "whatismyipaddress.com"
+    ],
+    "elementsToRemove": [
+      ".fEy1Z2XT"
     ]
   },
   "weather": {
