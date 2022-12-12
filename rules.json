@@ -743,6 +743,14 @@
       ".Mg2-connext"
     ]
   },
+  "thegamer": {
+    "matches": [
+      "www.thegamer.com"
+    ],
+    "elementsToRemove": [
+      ".fEy1Z2XT"
+    ]
+  },
   "toptenz": {
     "matches": [
       "www.toptenz.net"
