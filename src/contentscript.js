@@ -91,6 +91,8 @@ const run = (rules) => {
     }
   }
 
+  setElementsToRemove(rules["_common"]["elementsToRemove"]);
+
   log("No match found");
 };
 

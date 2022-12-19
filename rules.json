@@ -1,4 +1,11 @@
 {
+  "_common": {
+    "matches": [],
+    "elementsToRemove": [
+      ".fc-ab-root",
+      ".fEy1Z2XT"
+    ]
+  },
   "ammanpatro.in": {
     "matches": [
       "www.ammanpatro.in"
@@ -36,14 +43,6 @@
       ".wrapper-3AzfF"
     ]
   },
-  "fancaps": {
-    "matches": [
-      "fancaps.net"
-    ],
-    "elementsToRemove": [
-      ".fEy1Z2XT"
-    ]
-  },
   "forbes": {
     "matches": [
       "www.forbes.com"
@@ -51,15 +50,6 @@
     "elementsToRemove": [
       ".tp-modal",
       ".tp-backdrop"
-    ]
-  },
-  "fox": {
-    "matches": [
-      "foxbusiness.com",
-      "foxnews.com"
-    ],
-    "elementsToRemove": [
-      ".fc-ab-root"
     ]
   },
   "gannett": {
@@ -440,15 +430,6 @@
       "div[style*='z-index: 2147483647']"
     ]
   },
-  "ign": {
-    "matches": [
-      "www.ign.com"
-    ],
-    "elementsToRemove": [
-      ".fc-ab-root",
-      ".fEy1Z2XT"
-    ]
-  },
   "independent": {
     "matches": [
       "www.independent.co.uk"
@@ -488,61 +469,6 @@
     "elementsToRemove": [
       ".tp-modal",
       ".tp-backdrop"
-    ]
-  },
-  "latimes": {
-    "matches": [
-      "www.latimes.com"
-    ],
-    "elementsToRemove": [
-      ".fc-ab-root"
-    ]
-  },
-  "lifesavvymedia": {
-    "matches": [
-      "www.howtogeek.com",
-      "www.reviewgeek.com",
-      "www.lifesavvy.com",
-      "www.cloudsavvyit.com",
-      "www.mindbounce.com"
-    ],
-    "elementsToRemove": [
-      ".fEy1Z2XT"
-    ]
-  },
-  "mcclatchy": {
-    "matches": [
-      "www.bnd.com",
-      "www.bellinghamherald.com",
-      "www.bradenton.com",
-      "www.centredaily.com",
-      "www.charlotteobserver.com",
-      "www.ledger-enquirer.com",
-      "www.fresnobee.com",
-      "www.heraldonline.com",
-      "www.heraldsun.com",
-      "www.idahostatesman.com",
-      "www.islandpacket.com",
-      "www.kansas.com",
-      "www.kansascity.com",
-      "www.kentucky.com",
-      "www.miamiherald.com",
-      "www.elnuevoherald.com",
-      "www.modbee.com",
-      "www.newsobserver.com",
-      "www.theolympian.com",
-      "www.sacbee.com",
-      "www.star-telegram.com",
-      "www.thestate.com",
-      "www.sunherald.com",
-      "www.myrtlebeachonline.com",
-      "www.thenewstribune.com",
-      "www.macon.com",
-      "www.sanluisobispo.com",
-      "www.tri-cityherald.com"
-    ],
-    "elementsToRemove": [
-      ".fc-ab-root"
     ]
   },
   "medianewsgroup": {
@@ -674,47 +600,12 @@
       ".adblocker"
     ]
   },
-  "onlysky": {
-    "matches": [
-      "onlysky.media"
-    ],
-    "elementsToRemove": [
-      ".fc-ab-root"
-    ]
-  },
   "planetsport": {
     "matches": [
       "www.planetfootball.com"
     ],
     "elementsToRemove": [
       ".unis"
-    ]
-  },
-  "rcsmediagroup": {
-    "matches": [
-      "www.expansion.com",
-      "www.telva.com",
-      "www.elmundo.es",
-      "www.marca.com"
-    ],
-    "elementsToRemove": [
-      ".fc-ab-root"
-    ]
-  },
-  "rottentomatoes": {
-    "matches": [
-      "www.rottentomatoes.com"
-    ],
-    "elementsToRemove": [
-      ".fEy1Z2XT"
-    ]
-  },
-  "ruinmyweek": {
-    "matches": [
-      "ruinmyweek.com"
-    ],
-    "elementsToRemove": [
-      ".fEy1Z2XT"
     ]
   },
   "sltrib": {
@@ -743,36 +634,12 @@
       ".Mg2-connext"
     ]
   },
-  "thegamer": {
-    "matches": [
-      "www.thegamer.com"
-    ],
-    "elementsToRemove": [
-      ".fEy1Z2XT"
-    ]
-  },
-  "toptenz": {
-    "matches": [
-      "www.toptenz.net"
-    ],
-    "elementsToRemove": [
-      ".fEy1Z2XT"
-    ]
-  },
   "tvtropes": {
     "matches": [
       "tvtropes.org"
     ],
     "elementsToRemove": [
       ".adblockModal"
-    ]
-  },
-  "whatismyipaddress": {
-    "matches": [
-      "whatismyipaddress.com"
-    ],
-    "elementsToRemove": [
-      ".fEy1Z2XT"
     ]
   },
   "weather": {
