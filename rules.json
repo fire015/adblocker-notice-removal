@@ -14,6 +14,18 @@
       ".ADs-BG"
     ]
   },
+  "axelspringer": {
+    "matches": [
+      "hobbyconsolas.com",
+      "computerhoy.com",
+      "businessinsider.es",
+      "autobild.es"
+    ],
+    "elementsToRemove": [
+      ".tp-modal",
+      ".tp-backdrop"
+    ]
+  },
   "cnn": {
     "matches": [
       "cnn.com"
