@@ -9,9 +9,8 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === "report") {
-    chrome.tabs.create({
-      url: "https://github.com/fire015/adblocker-notice-removal/issues/new",
-    });
+  if (info.menuItemId === "report" && tab) {
+    const url = getIssueURL(tab.url);
+    chrome.tabs.create({ url });
   }
 });

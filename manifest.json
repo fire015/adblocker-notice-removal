@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Ad Blocker Notice Removal",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "author": "Jason M",
   "description": "Remove the ad blocker notice on popular sites",
   "icons": {
@@ -32,6 +32,7 @@
   "permissions": [
     "contextMenus",
     "storage",
-    "alarms"
+    "alarms",
+    "tabs"
   ]
 }
