@@ -55,6 +55,14 @@
       ".wrapper-3AzfF"
     ]
   },
+  "drakescans": {
+    "matches": [
+      "drakescans.com"
+    ],
+    "elementsToRemove": [
+      "div[class^='popup']"
+    ]
+  },
   "forbes": {
     "matches": [
       "www.forbes.com"
