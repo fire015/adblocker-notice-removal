@@ -612,6 +612,14 @@
       ".blocking-ads-modal"
     ]
   },
+  "naoleveportras": {
+    "matches": [
+      "www.naoleveportras.net"
+    ],
+    "elementsToRemove": [
+      "div[class^='popup']"
+    ]
+  },
   "nu": {
     "matches": [
       "nu.nl"
