@@ -591,6 +591,14 @@
       ".connext-modal-backdrop"
     ]
   },
+  "mundodeportivo": {
+    "matches": [
+      "solowrestling.mundodeportivo.com"
+    ],
+    "elementsToRemove": [
+      ".miadblock"
+    ]
+  },
   "nbcuniversal": {
     "matches": [
       "www.msnbc.com",
