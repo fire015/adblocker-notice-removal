@@ -450,6 +450,14 @@
       "div[style*='z-index: 2147483647']"
     ]
   },
+  "hindustantimes": {
+    "matches": [
+      "www.hindustantimes.com"
+    ],
+    "elementsToRemove": [
+      "#id-modal-backdrop"
+    ]
+  },
   "independent": {
     "matches": [
       "www.independent.co.uk"
@@ -668,6 +676,14 @@
     ],
     "elementsToRemove": [
       ".Mg2-connext"
+    ]
+  },
+  "tempsmss": {
+    "matches": [
+      "tempsmss.com"
+    ],
+    "elementsToRemove": [
+      ".popup07848963wrap"
     ]
   },
   "tvtropes": {
