@@ -26,6 +26,14 @@
       ".tp-backdrop"
     ]
   },
+  "camerajabber": {
+    "matches": [
+      "camerajabber.com"
+    ],
+    "elementsToRemove": [
+      "#addBlockModal"
+    ]
+  },
   "cnn": {
     "matches": [
       "cnn.com"
