@@ -1,4 +1,5 @@
-let hasCheckedForOverflowHidden = false;
+let hasShownBadge = false;
+let removalAttempts = 25;
 
 const log = (msg) => {
   if (!("update_url" in chrome.runtime.getManifest())) {
@@ -7,23 +8,21 @@ const log = (msg) => {
 };
 
 const showBadge = () => {
+  if (hasShownBadge) {
+    return;
+  }
+
+  hasShownBadge = true;
   chrome.runtime.sendMessage({ action: "showBadge" });
 };
 
 const checkOverflowHidden = () => {
-  if (hasCheckedForOverflowHidden) {
-    return;
-  }
-
-  hasCheckedForOverflowHidden = true;
-  showBadge();
-
-  let timesRun = 0;
+  let attempts = 0;
 
   const interval = setInterval(() => {
-    timesRun++;
+    attempts++;
 
-    if (timesRun === 25) {
+    if (attempts === removalAttempts) {
       clearInterval(interval);
     }
 
@@ -51,14 +50,18 @@ const checkOverflowHiddenEl = (el) => {
   }
 };
 
-const setElementsToRemove = (elementsToRemove) => {
-  elementsToRemove.forEach((el) => {
+const setElementsToRemove = (rule) => {
+  if (rule["removalAttempts"]) {
+    removalAttempts = rule["removalAttempts"];
+  }
+
+  rule["elementsToRemove"].forEach((el) => {
     document.arrive(el, { onceOnly: true }, (e) => removeElement(el, e, 0));
   });
 };
 
 const removeElement = (el, e, attempts) => {
-  if (attempts === 25) {
+  if (attempts === removalAttempts) {
     return;
   }
 
@@ -71,6 +74,7 @@ const removeElement = (el, e, attempts) => {
 
   log("Removing " + el);
   e.remove();
+  showBadge();
   checkOverflowHidden();
 };
 
@@ -85,13 +89,13 @@ const run = (rules) => {
     for (let i = 0; i < matches.length; i++) {
       if (isHostnameMatched(window.location.hostname, matches[i])) {
         log("Found match for " + r + " on " + matches[i]);
-        setElementsToRemove(rules[r]["elementsToRemove"]);
+        setElementsToRemove(rules[r]);
         return;
       }
     }
   }
 
-  setElementsToRemove(rules["_common"]["elementsToRemove"]);
+  setElementsToRemove(rules["_common"]);
   log("No match found");
 };
 

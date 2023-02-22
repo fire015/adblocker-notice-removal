@@ -40,6 +40,8 @@ The `matches` array contains the hostnames and each one is string compared from 
 
 The `elementsToRemove` array takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors) such as `.class` or `#id` to remove.
 
+You can optionally pass in a `removalAttempts` integer that will increase the number of attempts it makes to remove an element (sometimes the element is in the DOM but the display is hidden for a longer period of time before becoming visible). The extension does 5 attempts per second and gives up after 25 attempts by default (so 5 seconds in total).
+
 If you make a change to the `rules.json` file and submit a pull request, please also bump the version in the `manifest.json` file.
 
 Thanks for your contribution!
