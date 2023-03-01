@@ -422,7 +422,8 @@
     ],
     "elementsToRemove": [
       "div[class^='sp_veil']",
-      "div[class^='sp_message_container']"
+      "div[class^='sp_message_container']",
+      ".fEy1Z2XT"
     ]
   },
   "hearst": {
