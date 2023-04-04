@@ -426,6 +426,14 @@
       ".fEy1Z2XT"
     ]
   },
+  "geeksforgeeks": {
+    "matches": [
+      "www.geeksforgeeks.org"
+    ],
+    "elementsToRemove": [
+      "#adBlockerModal"
+    ]
+  },
   "hearst": {
     "matches": [
       "www.sfchronicle.com",
