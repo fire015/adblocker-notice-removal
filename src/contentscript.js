@@ -61,16 +61,16 @@ const checkOverflowHiddenEl = (el, rule) => {
 };
 
 const setElementsToRemove = (rule) => {
-  if (rule["removalAttempts"]) {
-    removalAttempts = rule["removalAttempts"];
-  }
-
   rule["elementsToRemove"].forEach((el) => {
     document.arrive(el, { onceOnly: true }, (e) => removeElement(el, e, rule, 0));
   });
 };
 
 const removeElement = (el, e, rule, attempts) => {
+  if (rule["removalAttempts"]) {
+    removalAttempts = rule["removalAttempts"];
+  }
+
   if (attempts === removalAttempts) {
     return;
   }

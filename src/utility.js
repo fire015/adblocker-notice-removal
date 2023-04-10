@@ -5,9 +5,9 @@ function getIssueURL(currentURL) {
   };
 
   if (currentURL) {
-    params["body"] = currentURL + "\n\nPlease provide more details here including any screenshots";
+    params["body"] = currentURL + "\n\nPlease provide more details here including your location (country) and any screenshots";
   } else {
-    params["body"] = "Please provide the URL and details here including any screenshots";
+    params["body"] = "Please provide the URL and details here including your location (country) and any screenshots";
   }
 
   const queryString = new URLSearchParams(params).toString();
