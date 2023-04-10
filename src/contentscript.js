@@ -45,8 +45,13 @@ const checkOverflowHiddenEl = (el, rule) => {
     computedStyle.getPropertyValue("overflow-x") === "hidden" ||
     computedStyle.getPropertyValue("overflow-y") === "hidden"
   ) {
-    log("Setting " + el + " to visible");
+    log("Setting " + el + " overflow to visible");
     e.style.cssText = "overflow: visible !important";
+
+    if (computedStyle.getPropertyValue("position") === "fixed") {
+      log("Setting " + el + " position to static");
+      e.style.cssText += "position: static !important";
+    }
   }
 
   if (rule["topClassToRemove"] && e.classList.contains(rule["topClassToRemove"])) {

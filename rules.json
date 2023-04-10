@@ -434,6 +434,14 @@
       "#adBlockerModal"
     ]
   },
+  "gutefrage": {
+    "matches": [
+      "www.gutefrage.net"
+    ],
+    "elementsToRemove": [
+      "#sp_message_container_771429"
+    ]
+  },
   "hearst": {
     "matches": [
       "www.sfchronicle.com",
