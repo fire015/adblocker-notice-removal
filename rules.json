@@ -705,6 +705,16 @@
       ".popup07848963wrap"
     ]
   },
+  "torrentmac": {
+    "matches": [
+      "torrentmac.net"
+    ],
+    "elementsToRemove": [
+      ".-blackout",
+      ".-wrapper"
+    ],
+    "topClassToRemove": "-blur"
+  },
   "tvtropes": {
     "matches": [
       "tvtropes.org"

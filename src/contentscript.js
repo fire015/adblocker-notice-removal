@@ -16,7 +16,7 @@ const showBadge = () => {
   chrome.runtime.sendMessage({ action: "showBadge" });
 };
 
-const checkOverflowHidden = () => {
+const checkOverflowHidden = (rule) => {
   let attempts = 0;
 
   const interval = setInterval(() => {
@@ -26,12 +26,12 @@ const checkOverflowHidden = () => {
       clearInterval(interval);
     }
 
-    checkOverflowHiddenEl("html");
-    checkOverflowHiddenEl("body");
+    checkOverflowHiddenEl("html", rule);
+    checkOverflowHiddenEl("body", rule);
   }, 200);
 };
 
-const checkOverflowHiddenEl = (el) => {
+const checkOverflowHiddenEl = (el, rule) => {
   const e = document.getElementsByTagName(el)[0];
 
   if (typeof e === "undefined") {
@@ -48,6 +48,11 @@ const checkOverflowHiddenEl = (el) => {
     log("Setting " + el + " to visible");
     e.style.cssText = "overflow: visible !important";
   }
+
+  if (rule["topClassToRemove"] && e.classList.contains(rule["topClassToRemove"])) {
+    log("Removing top class ." + rule["topClassToRemove"]);
+    e.classList.remove(rule["topClassToRemove"]);
+  }
 };
 
 const setElementsToRemove = (rule) => {
@@ -56,11 +61,11 @@ const setElementsToRemove = (rule) => {
   }
 
   rule["elementsToRemove"].forEach((el) => {
-    document.arrive(el, { onceOnly: true }, (e) => removeElement(el, e, 0));
+    document.arrive(el, { onceOnly: true }, (e) => removeElement(el, e, rule, 0));
   });
 };
 
-const removeElement = (el, e, attempts) => {
+const removeElement = (el, e, rule, attempts) => {
   if (attempts === removalAttempts) {
     return;
   }
@@ -68,14 +73,14 @@ const removeElement = (el, e, attempts) => {
   const computedStyle = window.getComputedStyle(e);
 
   if (computedStyle.getPropertyValue("display") === "none") {
-    setTimeout(() => removeElement(el, e, attempts + 1), 200);
+    setTimeout(() => removeElement(el, e, rule, attempts + 1), 200);
     return;
   }
 
   log("Removing " + el);
   e.remove();
   showBadge();
-  checkOverflowHidden();
+  checkOverflowHidden(rule);
 };
 
 const isHostnameMatched = (hostname, hostnameToMatch) => {
