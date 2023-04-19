@@ -77,8 +77,8 @@
       "www.forbes.com"
     ],
     "elementsToRemove": [
-      ".tp-modal",
-      ".tp-backdrop"
+      ".zephr-ad-block-detected-backdrop",
+      ".zephr-ad-block-detected-modal"
     ]
   },
   "gannett": {
@@ -728,7 +728,8 @@
       "tvtropes.org"
     ],
     "elementsToRemove": [
-      ".adblockModal"
+      ".adblockModal",
+      ".fc-ab-root"
     ]
   },
   "weather": {
