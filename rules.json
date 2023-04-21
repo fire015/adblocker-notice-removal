@@ -740,5 +740,11 @@
       ".tp-modal",
       ".tp-backdrop"
     ]
+  },
+  "w3resource": {
+    "matches": [
+      "w3resource.com"
+    ],
+    "customScriptToRun": "w3resource"
   }
 }

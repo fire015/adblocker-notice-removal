@@ -60,7 +60,17 @@ const checkOverflowHiddenEl = (el, rule) => {
   }
 };
 
-const setElementsToRemove = (rule) => {
+const runRule = (rule) => {
+  if (rule["customScriptToRun"]) {
+    const cs = new CustomScripts();
+
+    if (typeof cs[rule["customScriptToRun"]] === "function") {
+      cs[rule["customScriptToRun"]]();
+    }
+
+    return;
+  }
+
   rule["elementsToRemove"].forEach((el) => {
     document.arrive(el, { onceOnly: true }, (e) => removeElement(el, e, rule, 0));
   });
@@ -99,13 +109,13 @@ const run = (rules) => {
     for (let i = 0; i < matches.length; i++) {
       if (isHostnameMatched(window.location.hostname, matches[i])) {
         log("Found match for " + r + " on " + matches[i]);
-        setElementsToRemove(rules[r]);
+        runRule(rules[r]);
         return;
       }
     }
   }
 
-  setElementsToRemove(rules["_common"]);
+  runRule(rules["_common"]);
   log("No match found");
 };
 
