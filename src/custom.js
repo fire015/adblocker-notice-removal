@@ -1,5 +1,5 @@
 class CustomScripts {
-  w3resource() {
+  w3resource(success) {
     document.addEventListener("DOMContentLoaded", () => {
       // wait for style change
       document.arrive("#w3r_body", { fireOnAttributesModification: true }, (e) => {
@@ -12,6 +12,8 @@ class CustomScripts {
           if (h2.length) {
             h2[h2.length - 1].remove();
           }
+
+          success();
         }
       });
     });

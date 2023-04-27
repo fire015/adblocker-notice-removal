@@ -65,7 +65,8 @@ const runRule = (rule) => {
     const cs = new CustomScripts();
 
     if (typeof cs[rule["customScriptToRun"]] === "function") {
-      cs[rule["customScriptToRun"]]();
+      log("Running custom script " + rule["customScriptToRun"]);
+      cs[rule["customScriptToRun"]](showBadge);
     }
 
     return;
