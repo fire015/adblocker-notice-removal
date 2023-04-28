@@ -4,10 +4,13 @@ function getIssueURL(currentURL) {
     body: "",
   };
 
+  const question =
+    "Which country are you browsing from? [ANSWER HERE]\n\nPlease take a screenshot of the adblocker notice and drag and drop the image here if possible.";
+
   if (currentURL) {
-    params["body"] = currentURL + "\n\nPlease provide more details here including your location (country) and any screenshots";
+    params["body"] = currentURL + "\n\n" + question;
   } else {
-    params["body"] = "Please provide the URL and details here including your location (country) and any screenshots";
+    params["body"] = "URL:\n\n" + question;
   }
 
   const queryString = new URLSearchParams(params).toString();
