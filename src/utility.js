@@ -1,15 +1,15 @@
 function getIssueURL(currentURL) {
-  const params = {
-    title: "Issue with website",
-    body: "",
-  };
+  const params = {};
 
   const question =
     "Which country are you browsing from? [ANSWER HERE]\n\nPlease take a screenshot of the adblocker notice and drag and drop the image here if possible.";
 
   if (currentURL) {
+    const url = new URL(currentURL);
+    params["title"] = "Issue with " + url.hostname;
     params["body"] = currentURL + "\n\n" + question;
   } else {
+    params["title"] = "Issue with website";
     params["body"] = "URL:\n\n" + question;
   }
 
