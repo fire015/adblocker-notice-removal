@@ -44,6 +44,14 @@
       "div[class^='sp_message_container']"
     ]
   },
+  "crast": {
+    "matches": [
+      "crast.net"
+    ],
+    "elementsToRemove": [
+      "#Adblock"
+    ]
+  },
   "dailymotion": {
     "matches": [
       "www.dailymotion.com"
