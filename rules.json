@@ -493,6 +493,14 @@
       ".blackOverlay"
     ]
   },
+  "iegybest": {
+    "matches": [
+      "iegybest.asia"
+    ],
+    "elementsToRemove": [
+      "#adBlock"
+    ]
+  },
   "independent": {
     "matches": [
       "www.independent.co.uk"
