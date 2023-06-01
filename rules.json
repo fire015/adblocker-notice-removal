@@ -748,6 +748,15 @@
       ".fc-ab-root"
     ]
   },
+  "wallpaperwaifu": {
+    "matches": [
+      "wallpaperwaifu.com"
+    ],
+    "elementsToRemove": [
+      "#slmxikz-blanket"
+    ],
+    "rebindRules": true
+  },
   "weather": {
     "matches": [
       "weather.com"

@@ -1,5 +1,5 @@
 class CustomScripts {
-  w3resource(success) {
+  w3resource(done) {
     document.addEventListener("DOMContentLoaded", () => {
       // wait for style change
       document.arrive("#w3r_body", { fireOnAttributesModification: true }, (e) => {
@@ -13,7 +13,7 @@ class CustomScripts {
             h2[h2.length - 1].remove();
           }
 
-          success();
+          done();
         }
       });
     });

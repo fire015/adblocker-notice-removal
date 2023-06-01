@@ -47,6 +47,8 @@ The `elementsToRemove` array takes a [CSS selector](https://developer.mozilla.or
 
 * You can pass in a `customScriptToRun` string to run a custom function defined in `src/custom.js` (this cannot be combined with `elementsToRemove`).
 
+* You can pass in a `rebindRules` boolean if after removal the DOM element comes back for the extension to remove again.
+
 If you make a change to the `rules.json` file and submit a pull request, please also bump the version in the `manifest.json` file.
 
 Thanks for your contribution!

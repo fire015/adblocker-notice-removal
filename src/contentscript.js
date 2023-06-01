@@ -97,6 +97,10 @@ const removeElement = (el, e, rule, attempts) => {
   e.remove();
   showBadge();
   checkOverflowHidden(rule);
+
+  if (rule["rebindRules"]) {
+    runRule(rule);
+  }
 };
 
 const isHostnameMatched = (hostname, hostnameToMatch) => {
