@@ -658,8 +658,9 @@
       "www.cnbc.com"
     ],
     "elementsToRemove": [
-      "div[style*='z-index: 2147483647']"
-    ]
+      ".fEy1Z2XT"
+    ],
+    "rebindRules": true
   },
   "netaktion": {
     "matches": [

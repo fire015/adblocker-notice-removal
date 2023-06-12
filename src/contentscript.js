@@ -3,7 +3,7 @@ let removalAttempts = 25;
 
 const log = (msg) => {
   if (!("update_url" in chrome.runtime.getManifest())) {
-    console.log(msg);
+    console.log("****** " + msg);
   }
 };
 
