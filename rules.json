@@ -680,6 +680,12 @@
       "div[class^='popup']"
     ]
   },
+  "nsw2u": {
+    "matches": [
+      "nsw2u.com"
+    ],
+    "customScriptToRun": "wordpress_plugin_chp"
+  },
   "nu": {
     "matches": [
       "nu.nl"
@@ -687,6 +693,16 @@
     "elementsToRemove": [
       ".adblocker"
     ]
+  },
+  "nullpk": {
+    "matches": [
+      "nullpk.com"
+    ],
+    "elementsToRemove": [
+      ".mdpDeblocker-blackout",
+      ".mdpDeblocker-wrapper"
+    ],
+    "topClassToRemove": "mdpDeblocker-blur"
   },
   "planetsport": {
     "matches": [
@@ -720,6 +736,15 @@
     ],
     "elementsToRemove": [
       ".Mg2-connext"
+    ]
+  },
+  "techgeeknext": {
+    "matches": [
+      "techgeeknext.com"
+    ],
+    "elementsToRemove": [
+      "#__vliadb83",
+      "#__vliadb83-bg"
     ]
   },
   "tempsmss": {

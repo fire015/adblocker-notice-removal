@@ -18,4 +18,16 @@ class CustomScripts {
       });
     });
   }
+
+  wordpress_plugin_chp(done) {
+    // https://wordpress.org/plugins/chp-ads-block-detector/
+    document.arrive(".adblock_title", { onceOnly: true }, (e) => {
+      const div = e.parentNode.parentNode.parentNode.parentNode.parentNode;
+
+      if (div) {
+        div.remove();
+        done();
+      }
+    });
+  }
 }
