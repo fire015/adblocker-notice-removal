@@ -80,6 +80,14 @@
       "div[class^='popup']"
     ]
   },
+  "emoji.gg": {
+    "matches": [
+      "emoji.gg"
+    ],
+    "elementsToRemove": [
+      "#yousuck"
+    ]
+  },
   "forbes": {
     "matches": [
       "www.forbes.com"
