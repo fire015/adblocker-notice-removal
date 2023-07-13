@@ -720,6 +720,15 @@
       ".unis"
     ]
   },
+  "samsungoneui": {
+    "matches": [
+      "samsungoneui.com"
+    ],
+    "elementsToRemove": [
+      "#tie-popup-adblock"
+    ],
+    "topClassToRemove": "tie-popup-is-opend"
+  },
   "sltrib": {
     "matches": [
       "www.sltrib.com"
