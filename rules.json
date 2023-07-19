@@ -69,7 +69,8 @@
     "elementsToRemove": [
       ".container-1Kowb",
       ".overlay-34_Kj",
-      ".wrapper-3AzfF"
+      ".wrapper-3AzfF",
+      ".fc-ab-root"
     ]
   },
   "drakescans": {
