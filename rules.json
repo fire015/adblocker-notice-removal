@@ -551,6 +551,14 @@
       ".tp-backdrop"
     ]
   },
+  "kbb": {
+    "matches": [
+      "www.kbb.com"
+    ],
+    "elementsToRemove": [
+      "#WhitelistOverlayModalBackground"
+    ]
+  },
   "medianewsgroup": {
     "matches": [
       "www.chicoer.com",
