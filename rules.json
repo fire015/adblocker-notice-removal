@@ -800,6 +800,15 @@
       ".fc-ab-root"
     ]
   },
+  "vakilsearch": {
+    "matches": [
+      "vakilsearch.com"
+    ],
+    "elementsToRemove": [
+      "#tie-popup-adblock"
+    ],
+    "topClassToRemove": "tie-popup-is-opend"
+  },
   "wallpaperwaifu": {
     "matches": [
       "wallpaperwaifu.com"
