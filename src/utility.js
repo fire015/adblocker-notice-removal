@@ -1,8 +1,11 @@
 function getIssueURL(currentURL) {
   const params = {};
+  const manifest = chrome.runtime.getManifest();
 
   const question =
-    "Which country are you browsing from? [ANSWER HERE]\n\nPlease take a screenshot of the adblocker notice and drag and drop the image here if possible.";
+    "Extension version: " +
+    manifest.version +
+    "\n\nWhich country are you browsing from? [ANSWER HERE]\n\nPlease take a screenshot of the adblocker notice and drag and drop the image here if possible.";
 
   if (currentURL) {
     const url = new URL(currentURL);
