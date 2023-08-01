@@ -98,7 +98,9 @@ const removeElement = (el, e, rule, attempts) => {
   showBadge();
   checkOverflowHidden(rule);
 
-  if (rule["rebindRules"]) {
+  // .fEy1Z2XT = admiral
+  if (rule["rebindRules"] || el === ".fEy1Z2XT") {
+    log("Rebinding rule...");
     runRule(rule);
   }
 };

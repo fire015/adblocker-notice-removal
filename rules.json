@@ -667,18 +667,6 @@
       ".miadblock"
     ]
   },
-  "nbcuniversal": {
-    "matches": [
-      "www.msnbc.com",
-      "www.today.com",
-      "www.nbcnews.com",
-      "www.cnbc.com"
-    ],
-    "elementsToRemove": [
-      ".fEy1Z2XT"
-    ],
-    "rebindRules": true
-  },
   "netaktion": {
     "matches": [
       "www.allmusic.com",
