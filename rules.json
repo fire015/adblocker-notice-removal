@@ -3,8 +3,10 @@
     "matches": [],
     "elementsToRemove": [
       ".fc-ab-root",
-      ".fEy1Z2XT"
-    ]
+      ".fEy1Z2XT",
+      "#tie-popup-adblock"
+    ],
+    "topClassToRemove": "tie-popup-is-opend"
   },
   "ammanpatro.in": {
     "matches": [
@@ -717,15 +719,6 @@
       ".unis"
     ]
   },
-  "samsungoneui": {
-    "matches": [
-      "samsungoneui.com"
-    ],
-    "elementsToRemove": [
-      "#tie-popup-adblock"
-    ],
-    "topClassToRemove": "tie-popup-is-opend"
-  },
   "sltrib": {
     "matches": [
       "www.sltrib.com"
@@ -769,6 +762,15 @@
       ".popup07848963wrap"
     ]
   },
+  "tucson": {
+    "matches": [
+      "tucson.com"
+    ],
+    "elementsToRemove": [
+      "#tucson-subscription-wall-modal",
+      ".modal-backdrop"
+    ]
+  },
   "torrentmac": {
     "matches": [
       "torrentmac.net"
@@ -787,15 +789,6 @@
       ".adblockModal",
       ".fc-ab-root"
     ]
-  },
-  "vakilsearch": {
-    "matches": [
-      "vakilsearch.com"
-    ],
-    "elementsToRemove": [
-      "#tie-popup-adblock"
-    ],
-    "topClassToRemove": "tie-popup-is-opend"
   },
   "wallpaperwaifu": {
     "matches": [
