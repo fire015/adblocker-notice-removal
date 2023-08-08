@@ -46,6 +46,12 @@
       "div[class^='sp_message_container']"
     ]
   },
+  "coursesdaddy": {
+    "matches": [
+      "coursesdaddy.com"
+    ],
+    "customScriptToRun": "wordpress_plugin_chp"
+  },
   "crast": {
     "matches": [
       "crast.net"
