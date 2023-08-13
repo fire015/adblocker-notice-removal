@@ -725,6 +725,15 @@
       ".unis"
     ]
   },
+  "shaalaa": {
+    "matches": [
+      "shaalaa.com"
+    ],
+    "elementsToRemove": [
+      ".ssgjturfgmb"
+    ],
+    "topClassToRemove": "gdignnrblblv"
+  },
   "sltrib": {
     "matches": [
       "www.sltrib.com"
