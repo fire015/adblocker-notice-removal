@@ -573,6 +573,12 @@
     ],
     "customScriptToRun": "wordpress_plugin_ad_inserter"
   },
+  "medeberiyaa": {
+    "matches": [
+      "medeberiyaa.com"
+    ],
+    "customScriptToRun": "wordpress_plugin_chp"
+  },
   "medianewsgroup": {
     "matches": [
       "www.chicoer.com",
