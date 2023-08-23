@@ -567,6 +567,12 @@
       "#WhitelistOverlayModalBackground"
     ]
   },
+  "m3uiptv": {
+    "matches": [
+      "u.m3uiptv.com"
+    ],
+    "customScriptToRun": "wordpress_plugin_ad_inserter"
+  },
   "medianewsgroup": {
     "matches": [
       "www.chicoer.com",

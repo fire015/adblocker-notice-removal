@@ -30,4 +30,24 @@ class CustomScripts {
       }
     });
   }
+
+  wordpress_plugin_ad_inserter(done) {
+    // https://en-gb.wordpress.org/plugins/ad-inserter/
+    document.arrive("div[style*='z-index: 33846']", { onceOnly: true }, (e) => {
+      const p = e.parentNode;
+
+      if (p) {
+        const ins = document.getElementsByTagName("ins");
+
+        for (let i = 0; i < ins.length; i++) {
+          if (ins[i].firstElementChild && ins[i].firstElementChild.tagName == "SECTION") {
+            ins[i].remove();
+          }
+        }
+
+        p.remove();
+        done();
+      }
+    });
+  }
 }
