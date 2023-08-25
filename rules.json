@@ -60,6 +60,14 @@
       "#Adblock"
     ]
   },
+  "crosswordspin": {
+    "matches": [
+      "crosswordspin.com"
+    ],
+    "elementsToRemove": [
+      "#popID"
+    ]
+  },
   "dailymotion": {
     "matches": [
       "www.dailymotion.com"
@@ -735,6 +743,14 @@
     ],
     "elementsToRemove": [
       ".unis"
+    ]
+  },
+  "rollercoin": {
+    "matches": [
+      "rollercoin.com"
+    ],
+    "elementsToRemove": [
+      ".adBlock-banner"
     ]
   },
   "shaalaa": {
