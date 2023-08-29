@@ -526,6 +526,14 @@
       "#adBlock"
     ]
   },
+  "imgur": {
+    "matches": [
+      "imgur.com"
+    ],
+    "elementsToRemove": [
+      ".Overlay"
+    ]
+  },
   "independent": {
     "matches": [
       "www.independent.co.uk"
@@ -736,6 +744,15 @@
       ".mdpDeblocker-wrapper"
     ],
     "topClassToRemove": "mdpDeblocker-blur"
+  },
+  "olarila": {
+    "matches": [
+      "www.olarila.com"
+    ],
+    "elementsToRemove": [
+      ".ipsDialog",
+      ".ipsModal"
+    ]
   },
   "planetsport": {
     "matches": [
