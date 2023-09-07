@@ -762,6 +762,14 @@
       ".unis"
     ]
   },
+  "polytoria": {
+    "matches": [
+      "polytoria.com"
+    ],
+    "elementsToRemove": [
+      "div[style*='position: sticky']"
+    ]
+  },
   "rollercoin": {
     "matches": [
       "rollercoin.com"
