@@ -7,6 +7,11 @@ if (!("update_url" in manifest)) {
 }
 
 chrome.tabs.query({ active: true }, (tab) => {
-  const url = getIssueURL(tab[0].url);
-  document.getElementById("link").setAttribute("href", url);
+  if (isYouTube(tab[0].url)) {
+    document.getElementById("report").innerHTML =
+      '<span class="red">Cannot remove from YouTube (<a href="https://github.com/fire015/adblocker-notice-removal/issues/119" target="_blank">why?</a>)</span>';
+  } else {
+    const url = getIssueURL(tab[0].url);
+    document.getElementById("link").setAttribute("href", url);
+  }
 });

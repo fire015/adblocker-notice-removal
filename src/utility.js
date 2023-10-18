@@ -22,3 +22,9 @@ function getIssueURL(currentURL) {
 
   return "https://github.com/fire015/adblocker-notice-removal/issues/new?" + queryString;
 }
+
+function isYouTube(url) {
+  const parsed = new URL(url);
+
+  return parsed.hostname.indexOf("youtube") !== -1;
+}
