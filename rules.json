@@ -8,6 +8,15 @@
     ],
     "topClassToRemove": "tie-popup-is-opend"
   },
+  "akwam": {
+    "matches": [
+      "akwam.us"
+    ],
+    "elementsToRemove": [
+      "#ofc9"
+    ],
+    "rebindRules": true
+  },
   "ammanpatro.in": {
     "matches": [
       "www.ammanpatro.in"
@@ -700,7 +709,8 @@
       "www.makeuseof.com"
     ],
     "elementsToRemove": [
-      ".bOvWNQ"
+      ".bOvWNQ",
+      ".fEy1Z2XT"
     ]
   },
   "mundodeportivo": {
@@ -836,6 +846,15 @@
     ],
     "elementsToRemove": [
       ".popup07848963wrap"
+    ]
+  },
+  "thequint": {
+    "matches": [
+      "thequint.com"
+    ],
+    "elementsToRemove": [
+      ".adblocker-popup",
+      "._3LA0i"
     ]
   },
   "tucson": {
