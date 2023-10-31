@@ -908,5 +908,20 @@
       "w3resource.com"
     ],
     "customScriptToRun": "w3resource"
+  },
+  "xhamster": {
+    "matches": [
+      "xhamster.com"
+    ],
+    "elementsToRemove": [
+      ".container-4caaa"
+    ],
+    "rebindRules": true
+  },
+  "zive": {
+    "matches": [
+      "zive.cz"
+    ],
+    "customScriptToRun": "zive"
   }
 }

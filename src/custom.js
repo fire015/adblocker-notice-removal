@@ -50,4 +50,15 @@ class CustomScripts {
       }
     });
   }
+
+  zive(done) {
+    document.arrive("a[title='Povolit reklamu']", { onceOnly: true }, (e) => {
+      const div = e.parentNode.parentNode.parentNode.parentNode;
+
+      if (div) {
+        div.remove();
+        done();
+      }
+    });
+  }
 }
