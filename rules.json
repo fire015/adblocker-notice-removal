@@ -123,6 +123,16 @@
       ".zephr-ad-block-detected-modal"
     ]
   },
+  "freecoursesite": {
+    "matches": [
+      "freecoursesite.com"
+    ],
+    "elementsToRemove": [
+      ".mdpDeblocker-blackout",
+      ".mdpDeblocker-wrapper"
+    ],
+    "topClassToRemove": "mdpDeblocker-blur"
+  },
   "gannett": {
     "matches": [
       "www.aberdeennews.com",

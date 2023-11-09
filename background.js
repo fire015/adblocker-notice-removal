@@ -1,1 +1,1 @@
-importScripts("src/rules.js", "src/utility.js", "src/menu.js", "src/actions.js");
+importScripts("src/utility.js", "src/menu.js", "src/actions.js");

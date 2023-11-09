@@ -126,8 +126,6 @@ const run = (rules) => {
   log("No match found");
 };
 
-chrome.storage.local.get("rules", (result) => {
-  if ("rules" in result) {
-    run(result["rules"]);
-  }
-});
+fetch(chrome.runtime.getURL("rules.json"))
+  .then((response) => response.json())
+  .then((rules) => run(rules));
