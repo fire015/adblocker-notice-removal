@@ -815,6 +815,13 @@
     ],
     "topClassToRemove": "gdignnrblblv"
   },
+  "slidesharedownloader": {
+    "matches": [
+      "slidesharedownloader.com",
+      "slideshare.downloader.is"
+    ],
+    "customScriptToRun": "wordpress_plugin_chp"
+  },
   "sltrib": {
     "matches": [
       "www.sltrib.com"
