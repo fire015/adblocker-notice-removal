@@ -798,6 +798,12 @@
       "div[style*='position: sticky']"
     ]
   },
+  "riwyat": {
+    "matches": [
+      "riwyat.com"
+    ],
+    "customScriptToRun": "wordpress_plugin_chp"
+  },
   "rollercoin": {
     "matches": [
       "rollercoin.com"
