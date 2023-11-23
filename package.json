@@ -3,6 +3,7 @@
   "description": "Build scripts for Ad Blocker Notice Removal",
   "private": true,
   "scripts": {
+    "build": "node tasks/build.js",
     "zip": "node tasks/zip.js",
     "publish": "node tasks/publish.js"
   },

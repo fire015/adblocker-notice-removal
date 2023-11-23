@@ -11,8 +11,9 @@ jobs:
       - name: Zip file
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
       - run: npm install
+      - run: npm run build
       - run: npm run zip
       - name: Upload artifact
         uses: actions/upload-artifact@v3

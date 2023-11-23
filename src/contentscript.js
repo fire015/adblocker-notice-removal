@@ -126,6 +126,7 @@ const run = (rules) => {
   log("No match found");
 };
 
-fetch(chrome.runtime.getURL("rules.json"))
-  .then((response) => response.json())
-  .then((rules) => run(rules));
+(async () => {
+  const rules = await getRules();
+  run(rules);
+})();
