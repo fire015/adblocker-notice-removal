@@ -69,6 +69,15 @@
       "#Adblock"
     ]
   },
+  "corriere": {
+    "matches": [
+      "corriere.it"
+    ],
+    "elementsToRemove": [
+      ".bck-adblock"
+    ],
+    "topClassToRemove": "has--adblock"
+  },
   "crosswordspin": {
     "matches": [
       "crosswordspin.com"
