@@ -1,0 +1,28 @@
+{
+  "name": "Ad Blocker Notice Removal",
+  "version": "2.0.0",
+  "author": "Jason M",
+  "description": "Remove the ad blocker notice on popular sites",
+  "manifest_version": 3,
+  "icons": {
+    "16": "/icons/16.png",
+    "32": "/icons/32.png",
+    "48": "/icons/48.png",
+    "128": "/icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["arrive.min.js", "contentScript.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "serviceWorker.js"
+  },
+  "action": {
+    "default_title": "Ad Blocker Notice Removal",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["contextMenus", "alarms", "tabs"]
+}

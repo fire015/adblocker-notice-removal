@@ -1,8 +1,10 @@
-class CustomScripts {
-  w3resource(done) {
+import { DoneCallback } from "./types";
+
+export class CustomScripts {
+  w3resource(done: DoneCallback) {
     document.addEventListener("DOMContentLoaded", () => {
       // wait for style change
-      document.arrive("#w3r_body", { fireOnAttributesModification: true }, (e) => {
+      document.arrive("#w3r_body", { fireOnAttributesModification: true }, (e: HTMLElement) => {
         if (e.style.display === "none") {
           e.style.display = "block";
 
@@ -19,10 +21,10 @@ class CustomScripts {
     });
   }
 
-  wordpress_plugin_chp(done) {
+  wordpress_plugin_chp(done: DoneCallback) {
     // https://wordpress.org/plugins/chp-ads-block-detector/
-    document.arrive(".adblock_title", { onceOnly: true }, (e) => {
-      const div = e.parentNode.parentNode.parentNode.parentNode.parentNode;
+    document.arrive(".adblock_title", { onceOnly: true }, (e: HTMLElement) => {
+      const div = e.parentNode.parentNode.parentNode.parentNode.parentNode as HTMLElement;
 
       if (div) {
         div.remove();
@@ -31,10 +33,10 @@ class CustomScripts {
     });
   }
 
-  wordpress_plugin_ad_inserter(done) {
+  wordpress_plugin_ad_inserter(done: DoneCallback) {
     // https://en-gb.wordpress.org/plugins/ad-inserter/
-    document.arrive("div[style*='z-index: 33846']", { onceOnly: true }, (e) => {
-      const p = e.parentNode;
+    document.arrive("div[style*='z-index: 33846']", { onceOnly: true }, (e: HTMLElement) => {
+      const p = e.parentNode as HTMLElement;
 
       if (p) {
         const ins = document.getElementsByTagName("ins");
@@ -51,9 +53,9 @@ class CustomScripts {
     });
   }
 
-  zive(done) {
-    document.arrive("a[title='Povolit reklamu']", { onceOnly: true }, (e) => {
-      const div = e.parentNode.parentNode.parentNode.parentNode;
+  zive(done: DoneCallback) {
+    document.arrive("a[title='Povolit reklamu']", { onceOnly: true }, (e: HTMLElement) => {
+      const div = e.parentNode.parentNode.parentNode.parentNode as HTMLElement;
 
       if (div) {
         div.remove();

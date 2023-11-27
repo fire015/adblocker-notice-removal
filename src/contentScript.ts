@@ -1,7 +1,12 @@
+import { CustomScripts } from "./custom";
+import _rules from "./rules.json";
+import { Rule } from "./types";
+const rules: { [name: string]: Rule } = _rules;
+
 let hasShownBadge = false;
 let removalAttempts = 25;
 
-const log = (msg) => {
+const log = (msg: string) => {
   if (!("update_url" in chrome.runtime.getManifest())) {
     console.log("****** " + msg);
   }
@@ -16,7 +21,7 @@ const showBadge = () => {
   chrome.runtime.sendMessage({ action: "showBadge" });
 };
 
-const checkOverflowHidden = (rule) => {
+const checkOverflowHidden = (rule: Rule) => {
   let attempts = 0;
 
   const interval = setInterval(() => {
@@ -31,7 +36,7 @@ const checkOverflowHidden = (rule) => {
   }, 200);
 };
 
-const checkOverflowHiddenEl = (el, rule) => {
+const checkOverflowHiddenEl = (el: string, rule: Rule) => {
   const e = document.getElementsByTagName(el)[0];
 
   if (typeof e === "undefined") {
@@ -60,7 +65,7 @@ const checkOverflowHiddenEl = (el, rule) => {
   }
 };
 
-const runRule = (rule) => {
+const runRule = (rule: Rule) => {
   if (rule["customScriptToRun"]) {
     const cs = new CustomScripts();
 
@@ -73,11 +78,11 @@ const runRule = (rule) => {
   }
 
   rule["elementsToRemove"].forEach((el) => {
-    document.arrive(el, { onceOnly: true }, (e) => removeElement(el, e, rule, 0));
+    document.arrive(el, { onceOnly: true }, (e: HTMLElement) => removeElement(el, e, rule, 0));
   });
 };
 
-const removeElement = (el, e, rule, attempts) => {
+const removeElement = (el: string, e: HTMLElement, rule: Rule, attempts: number) => {
   if (rule["removalAttempts"]) {
     removalAttempts = rule["removalAttempts"];
   }
@@ -105,11 +110,11 @@ const removeElement = (el, e, rule, attempts) => {
   }
 };
 
-const isHostnameMatched = (hostname, hostnameToMatch) => {
+const isHostnameMatched = (hostname: string, hostnameToMatch: string): boolean => {
   return hostname.slice(-hostnameToMatch.length) === hostnameToMatch;
 };
 
-const run = (rules) => {
+const run = () => {
   for (const r in rules) {
     const matches = rules[r]["matches"];
 
@@ -126,7 +131,4 @@ const run = (rules) => {
   log("No match found");
 };
 
-(async () => {
-  const rules = await getRules();
-  run(rules);
-})();
+run();

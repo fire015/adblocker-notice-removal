@@ -1,3 +1,6 @@
+import "../styles/popup.scss";
+import { getIssueURL, isYouTube } from "./utility";
+
 const manifest = chrome.runtime.getManifest();
 
 document.getElementById("version").innerText = manifest.version;

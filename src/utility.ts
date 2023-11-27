@@ -1,5 +1,7 @@
-function getIssueURL(currentURL) {
-  const params = {};
+import { IssueQueryStringParams } from "./types";
+
+export function getIssueURL(currentURL: string): string {
+  const params: IssueQueryStringParams = {};
   const manifest = chrome.runtime.getManifest();
 
   const question =
@@ -23,7 +25,7 @@ function getIssueURL(currentURL) {
   return "https://github.com/fire015/adblocker-notice-removal/issues/new?" + queryString;
 }
 
-function isYouTube(url) {
+export function isYouTube(url: string): boolean {
   const parsed = new URL(url);
 
   return parsed.hostname.indexOf("youtube") !== -1;
