@@ -1,5 +1,8 @@
 name: Release to Chrome Web Store
-on: [workflow_dispatch]
+on:
+  push:
+    branches:
+      - webpack
 # on:
 #   release:
 #     types: [created]
