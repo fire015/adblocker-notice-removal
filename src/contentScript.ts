@@ -1,7 +1,7 @@
 import { CustomScripts } from "./custom";
 import _rules from "./rules.json";
-import { Rule } from "./types";
-const rules: { [name: string]: Rule } = _rules;
+import { Rule, Rules } from "./types";
+const rules: Rules = _rules;
 
 let hasShownBadge = false;
 let removalAttempts = 25;

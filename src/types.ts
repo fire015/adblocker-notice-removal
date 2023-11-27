@@ -7,6 +7,8 @@ export interface Rule {
   customScriptToRun?: string;
 }
 
+export type Rules = { [name: string]: Rule };
+
 export type DoneCallback = () => void;
 
 export type IssueQueryStringParams = {
