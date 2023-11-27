@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const BUILD_FILE = __dirname + "/../dist/build.zip";
+const BUILD_FILE = path.resolve(__dirname + "/../dist/build.zip");
 
 const webStore = chromeWebstoreUpload({
   extensionId: process.env.EXTENSION_ID,
@@ -13,19 +13,6 @@ const webStore = chromeWebstoreUpload({
   clientSecret: process.env.CLIENT_SECRET,
   refreshToken: process.env.REFRESH_TOKEN,
 });
-
-const publishFile = () => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const token = await webStore.fetchToken();
-      await uploadFile(token);
-      await publishExtension(token);
-      resolve();
-    } catch (err) {
-      reject(err);
-    }
-  });
-};
 
 const uploadFile = async (token) => {
   const res = await webStore.uploadExisting(fs.createReadStream(BUILD_FILE), token);
@@ -43,10 +30,10 @@ const publishExtension = async (token) => {
   }
 };
 
-console.log("Publishing file...");
-publishFile()
-  .then(() => console.log("Zip file published"))
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
+(async () => {
+  console.log("Publishing " + BUILD_FILE);
+  const token = await webStore.fetchToken();
+  await uploadFile(token);
+  await publishExtension(token);
+  console.log("Done");
+})();
