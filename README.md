@@ -17,15 +17,21 @@ If you are comfortable with Javascript, you can add it to the rules file and cre
 1. Fork the repository
 2. Clone the forked repository locally
 3. From the `master` branch, create and checkout a new feature branch to work upon
-4. Click the 'Load unpacked' button in chrome://extensions and choose the folder
-5. Make your changes and test them
-6. Push the changes to your github repository
-7. Submit a pull request from your repo back to the original repository
-8. Once it is accepted, a new update will be published to the Chrome Web Store
+4. Run `npm install`
+5. Run `npm run dev` for development mode, `npm run build` for production build
+6. Add the extension to Chrome:
+    1. Go to `chrome://extensions/`
+    2. Enable the `Developer mode`
+    3. Click on `Load unpacked`
+    4. Choose the `dist` directory
+7. Make your changes and test them
+8. Push the changes to your github repository
+9. Submit a pull request from your repo back to the original repository
+10. Once it is accepted, a new update will be published to the Chrome Web Store
 
 ## Adding/Editing Website Rules
 
-The `rules.json` file is made up of a list of websites and the known DOM elements that show the ad blocker notice on the page.
+The `src/rules.json` file is made up of a list of websites and the known DOM elements that show the ad blocker notice on the page.
 
 When a user visits a matching website, the extension watches for the DOM elements to be created and then removes them. It also removes the hidden overflow on the html and body tags.
 
@@ -49,6 +55,6 @@ The `elementsToRemove` array takes a [CSS selector](https://developer.mozilla.or
 
 * You can pass in a `rebindRules` boolean if after removal the DOM element comes back for the extension to remove again.
 
-If you make a change to the `rules.json` file and submit a pull request, please also bump the version in the `manifest.json` file.
+If you make a change to the `rules.json` file and submit a pull request, please also bump the version in the `static/manifest.json` file.
 
 Thanks for your contribution!
