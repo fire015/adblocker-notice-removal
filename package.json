@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack --watch --config webpack.dev.cjs",
     "build": "webpack --config webpack.prod.cjs",
-    "lint": "eslint --ext .ts,.js --max-warnings=0 ."
+    "lint": "eslint --ext .ts,.js --max-warnings=0 .",
+    "publish": "node tasks/publish.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.18.6",
