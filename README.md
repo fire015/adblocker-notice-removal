@@ -2,7 +2,7 @@
 
 Chrome extension to remove the ad blocker notice on popular sites.
 
-Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/ad-blocker-notice-removal/bnohpbaeckhhfnfijdnapgmbldkigchl).
+Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/ad-blocker-notice-removal/bnohpbaeckhhfnfijdnapgmbldkigchl?pli=1).
 
 Icons made by [DinosoftLabs](https://www.flaticon.com/authors/dinosoftlabs).
 
