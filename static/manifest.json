@@ -1,6 +1,6 @@
 {
   "name": "Ad Blocker Notice Removal",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Jason M",
   "description": "Remove the ad blocker notice on popular sites",
   "manifest_version": 3,

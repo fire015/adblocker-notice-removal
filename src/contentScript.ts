@@ -115,6 +115,11 @@ const isHostnameMatched = (hostname: string, hostnameToMatch: string): boolean =
 };
 
 const run = () => {
+  if (!document.arrive) {
+    log("Cannot observe document");
+    return;
+  }
+
   for (const r in rules) {
     const matches = rules[r]["matches"];
 

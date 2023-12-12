@@ -4,7 +4,9 @@
     "elementsToRemove": [
       ".fc-ab-root",
       ".fEy1Z2XT",
-      "#tie-popup-adblock"
+      "#tie-popup-adblock",
+      ".tp-modal",
+      ".tp-backdrop"
     ],
     "topClassToRemove": "tie-popup-is-opend"
   },
@@ -23,18 +25,6 @@
     ],
     "elementsToRemove": [
       ".ADs-BG"
-    ]
-  },
-  "axelspringer": {
-    "matches": [
-      "hobbyconsolas.com",
-      "computerhoy.com",
-      "businessinsider.es",
-      "autobild.es"
-    ],
-    "elementsToRemove": [
-      ".tp-modal",
-      ".tp-backdrop"
     ]
   },
   "camerajabber": {
@@ -562,25 +552,6 @@
       ".Overlay"
     ]
   },
-  "independent": {
-    "matches": [
-      "www.independent.co.uk"
-    ],
-    "elementsToRemove": [
-      ".tp-modal",
-      ".tp-backdrop"
-    ]
-  },
-  "insider": {
-    "matches": [
-      "www.insider.com",
-      "www.businessinsider.com"
-    ],
-    "elementsToRemove": [
-      ".tp-modal",
-      ".tp-backdrop"
-    ]
-  },
   "investing": {
     "matches": [
       "investing.com"
@@ -591,24 +562,21 @@
       "#__next>div[class*=overlay_overlay]"
     ]
   },
-  "jpimedia": {
-    "matches": [
-      "www.scotsman.com",
-      "www.thestar.co.uk",
-      "www.yorkshirepost.co.uk",
-      "www.newsletter.co.uk"
-    ],
-    "elementsToRemove": [
-      ".tp-modal",
-      ".tp-backdrop"
-    ]
-  },
   "kbb": {
     "matches": [
       "www.kbb.com"
     ],
     "elementsToRemove": [
       "#WhitelistOverlayModalBackground"
+    ]
+  },
+  "mangoai": {
+    "matches": [
+      "mangoai.co"
+    ],
+    "elementsToRemove": [
+      ".popup-background",
+      ".open-popup"
     ]
   },
   "m3uiptv": {
@@ -837,15 +805,6 @@
     ],
     "customScriptToRun": "wordpress_plugin_chp"
   },
-  "sltrib": {
-    "matches": [
-      "www.sltrib.com"
-    ],
-    "elementsToRemove": [
-      ".tp-modal",
-      ".tp-backdrop"
-    ]
-  },
   "spanishdict": {
     "matches": [
       "www.spanishdict.com",
@@ -925,15 +884,6 @@
       "#slmxikz-blanket"
     ],
     "rebindRules": true
-  },
-  "weather": {
-    "matches": [
-      "weather.com"
-    ],
-    "elementsToRemove": [
-      ".tp-modal",
-      ".tp-backdrop"
-    ]
   },
   "w3resource": {
     "matches": [
