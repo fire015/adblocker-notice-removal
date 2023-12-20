@@ -63,4 +63,19 @@ export class CustomScripts {
       }
     });
   }
+
+  opgg(done: DoneCallback) {
+    document.arrive(
+      "img[src='https://www.gstatic.com/images/icons/material/system/1x/warning_amber_24dp.png']",
+      { onceOnly: false },
+      (e: HTMLElement) => {
+        const div = e.parentNode.parentNode as HTMLElement;
+
+        if (div) {
+          div.remove();
+          done();
+        }
+      }
+    );
+  }
 }

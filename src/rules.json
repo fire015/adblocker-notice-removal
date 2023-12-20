@@ -760,6 +760,12 @@
       ".ipsModal"
     ]
   },
+  "opgg": {
+    "matches": [
+      "op.gg"
+    ],
+    "customScriptToRun": "opgg"
+  },
   "planetsport": {
     "matches": [
       "www.planetfootball.com"
