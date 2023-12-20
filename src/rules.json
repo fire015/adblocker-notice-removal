@@ -728,7 +728,8 @@
   },
   "nsw2u": {
     "matches": [
-      "nsw2u.com"
+      "nsw2u.com",
+      "nsw2u.net"
     ],
     "customScriptToRun": "wordpress_plugin_chp"
   },
