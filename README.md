@@ -51,7 +51,7 @@ The `elementsToRemove` array takes a [CSS selector](https://developer.mozilla.or
 
 * You can pass in a `topClassToRemove` string to check and remove the class in the html and body elements.
 
-* You can pass in a `customScriptToRun` string to run a custom function defined in `src/custom.js` (this cannot be combined with `elementsToRemove`).
+* You can pass in a `customScriptToRun` string to run a custom function defined in `src/custom.js` (can be combined with `elementsToRemove`).
 
 * You can pass in a `rebindRules` boolean if after removal the DOM element comes back for the extension to remove again.
 

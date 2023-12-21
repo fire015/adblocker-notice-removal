@@ -73,13 +73,13 @@ const runRule = (rule: Rule) => {
       log("Running custom script " + rule["customScriptToRun"]);
       cs[rule["customScriptToRun"]](showBadge);
     }
-
-    return;
   }
 
-  rule["elementsToRemove"].forEach((el) => {
-    document.arrive(el, { onceOnly: true }, (e: HTMLElement) => removeElement(el, e, rule, 0));
-  });
+  if (rule["elementsToRemove"]) {
+    rule["elementsToRemove"].forEach((el) => {
+      document.arrive(el, { onceOnly: true }, (e: HTMLElement) => removeElement(el, e, rule, 0));
+    });
+  }
 };
 
 const removeElement = (el: string, e: HTMLElement, rule: Rule, attempts: number) => {
