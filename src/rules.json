@@ -570,6 +570,15 @@
       "#WhitelistOverlayModalBackground"
     ]
   },
+  "magesy": {
+    "matches": [
+      "magesy.blog"
+    ],
+    "elementsToRemove": [
+      "#superadblocker",
+      "#adblockbyspider"
+    ]
+  },
   "mangoai": {
     "matches": [
       "mangoai.co"
@@ -797,6 +806,14 @@
     ],
     "elementsToRemove": [
       ".adBlock-banner"
+    ]
+  },
+  "serkarijobresult": {
+    "matches": [
+      "serkarijobresult.com"
+    ],
+    "elementsToRemove": [
+      "#AdbModel"
     ]
   },
   "shaalaa": {
