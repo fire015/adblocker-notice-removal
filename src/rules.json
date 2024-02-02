@@ -76,14 +76,6 @@
       "#popID"
     ]
   },
-  "dailymotion": {
-    "matches": [
-      "www.dailymotion.com"
-    ],
-    "elementsToRemove": [
-      ".Overlay__containerActive___2te0I"
-    ]
-  },
   "dmgmedia": {
     "matches": [
       "www.dailymail.co.uk",
