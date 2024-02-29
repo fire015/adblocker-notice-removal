@@ -95,7 +95,8 @@
     ],
     "elementsToRemove": [
       "div[class^='popup']"
-    ]
+    ],
+    "customScriptToRun": "wordpress_plugin_chp"
   },
   "emoji.gg": {
     "matches": [
@@ -727,6 +728,16 @@
       "div[class^='popup']"
     ]
   },
+  "nflpenalties": {
+    "matches": [
+      "www.nflpenalties.com"
+    ],
+    "elementsToRemove": [
+      "#awrapper1",
+      "#awrapper2",
+      "#awrapper3"
+    ]
+  },
   "nsw2u": {
     "matches": [
       "nsw2u.com",
@@ -830,7 +841,7 @@
       "www.ingles.com"
     ],
     "elementsToRemove": [
-      ".ReactModal__Overlay ReactModal__Overlay--after-open"
+      ".quoIasIr"
     ]
   },
   "tampabay": {
