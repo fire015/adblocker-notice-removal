@@ -1,0 +1,22 @@
+{
+  "youtube": {
+    "matches": ["youtube.com"],
+    "link": "https://github.com/fire015/adblocker-notice-removal/issues/119"
+  },
+  "dailymotion": {
+    "matches": ["dailymotion.com"],
+    "link": "https://github.com/fire015/adblocker-notice-removal/issues/150"
+  },
+  "photopea": {
+    "matches": ["photopea.com"],
+    "link": "https://github.com/fire015/adblocker-notice-removal/issues/156"
+  },
+  "megaup": {
+    "matches": ["download.megaup.net"],
+    "link": "https://github.com/fire015/adblocker-notice-removal/issues/152"
+  },
+  "aternos": {
+    "matches": ["aternos.org"],
+    "link": "https://github.com/fire015/adblocker-notice-removal/issues/147"
+  }
+}

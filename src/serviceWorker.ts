@@ -1,4 +1,4 @@
-import { getIssueURL, isYouTube } from "./utility";
+import { getIssueURL, isIgnoredSite } from "./utility";
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.removeAll(() => {
@@ -12,8 +12,10 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "report" && tab) {
-    if (isYouTube(tab.url)) {
-      chrome.tabs.create({ url: "https://github.com/fire015/adblocker-notice-removal/issues/119" });
+    const ignoreLink = isIgnoredSite(tab.url);
+
+    if (ignoreLink) {
+      chrome.tabs.create({ url: ignoreLink });
     } else {
       const url = getIssueURL(tab.url);
       chrome.tabs.create({ url });

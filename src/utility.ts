@@ -1,4 +1,6 @@
-import { IssueQueryStringParams } from "./types";
+import _ignore from "./ignore.json";
+import { IssueQueryStringParams, IgnoreRules } from "./types";
+const ignoreRules: IgnoreRules = _ignore;
 
 export function getIssueURL(currentURL: string): string {
   const params: IssueQueryStringParams = {};
@@ -25,8 +27,22 @@ export function getIssueURL(currentURL: string): string {
   return "https://github.com/fire015/adblocker-notice-removal/issues/new?" + queryString;
 }
 
-export function isYouTube(url: string): boolean {
+export function isIgnoredSite(url: string): string | null {
   const parsed = new URL(url);
 
-  return parsed.hostname.indexOf("youtube") !== -1;
+  for (const r in ignoreRules) {
+    const matches = ignoreRules[r]["matches"];
+
+    for (let i = 0; i < matches.length; i++) {
+      if (isHostnameMatched(parsed.hostname, matches[i])) {
+        return ignoreRules[r]["link"];
+      }
+    }
+  }
+
+  return null;
+}
+
+export function isHostnameMatched(hostname: string, hostnameToMatch: string): boolean {
+  return hostname.slice(-hostnameToMatch.length) === hostnameToMatch;
 }

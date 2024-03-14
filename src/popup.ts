@@ -1,5 +1,5 @@
 import "../styles/popup.scss";
-import { getIssueURL, isYouTube } from "./utility";
+import { getIssueURL, isIgnoredSite } from "./utility";
 
 const manifest = chrome.runtime.getManifest();
 
@@ -9,12 +9,14 @@ if (!("update_url" in manifest)) {
   document.getElementById("version").innerText += " (dev)";
 }
 
-chrome.tabs.query({ active: true }, (tab) => {
-  if (isYouTube(tab[0].url)) {
+chrome.tabs.query({ active: true, lastFocusedWindow: true }, ([tab]) => {
+  const ignoreLink = isIgnoredSite(tab.url);
+
+  if (ignoreLink) {
     document.getElementById("report").innerHTML =
-      '<span class="red">Cannot remove from YouTube (<a href="https://github.com/fire015/adblocker-notice-removal/issues/119" target="_blank">why?</a>)</span>';
+      '<span class="red">Cannot remove from this site (<a href="' + ignoreLink + '" target="_blank">why?</a>)</span>';
   } else {
-    const url = getIssueURL(tab[0].url);
+    const url = getIssueURL(tab.url);
     document.getElementById("link").setAttribute("href", url);
   }
 });

@@ -1,4 +1,5 @@
 import { CustomScripts } from "./custom";
+import { isHostnameMatched } from "./utility";
 import _rules from "./rules.json";
 import { Rule, Rules } from "./types";
 const rules: Rules = _rules;
@@ -108,10 +109,6 @@ const removeElement = (el: string, e: HTMLElement, rule: Rule, attempts: number)
     log("Rebinding rule...");
     runRule(rule);
   }
-};
-
-const isHostnameMatched = (hostname: string, hostnameToMatch: string): boolean => {
-  return hostname.slice(-hostnameToMatch.length) === hostnameToMatch;
 };
 
 const run = () => {

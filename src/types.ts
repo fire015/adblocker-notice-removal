@@ -9,6 +9,13 @@ export interface Rule {
 
 export type Rules = { [name: string]: Rule };
 
+export interface IgnoreRule {
+  matches: string[];
+  link: string;
+}
+
+export type IgnoreRules = { [name: string]: IgnoreRule };
+
 export type DoneCallback = () => void;
 
 export type IssueQueryStringParams = {
