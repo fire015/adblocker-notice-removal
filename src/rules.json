@@ -27,6 +27,14 @@
       ".ADs-BG"
     ]
   },
+  "atozmath": {
+    "matches": [
+      "atozmath.com"
+    ],
+    "elementsToRemove": [
+      "#lblAdMsg"
+    ]
+  },
   "camerajabber": {
     "matches": [
       "camerajabber.com"
@@ -561,6 +569,14 @@
     ],
     "elementsToRemove": [
       "#WhitelistOverlayModalBackground"
+    ]
+  },
+  "lootlinks": {
+    "matches": [
+      "lootlinks.co"
+    ],
+    "elementsToRemove": [
+      "div[style*='z-index: 2147483647']"
     ]
   },
   "magesy": {
