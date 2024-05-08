@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adblock test</title>
+    <style>
+      .modal {
+        background-color: #000;
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        color: #fff;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/arrive@2.4.1/src/arrive.min.js"></script>
+    <script>
+      document.arrive("[style*='position: fixed']", { onceOnly: false, fireOnAttributesModification: true }, (e) => {
+        console.log(e);
+        if (e.hasAttribute("style") && Number(e.style.zIndex) >= 1000) {
+          const computedStyle = window.getComputedStyle(e);
+
+          if (computedStyle.getPropertyValue("display") !== "none") {
+            log(e.nodeName);
+            e.remove();
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <button type="button" onclick="showModal()">Show Modal</button>
+  </body>
+
+  <script>
+    function showModal() {
+      const html = '<div class="modal" style="position: fixed;">ADBLOCK</div>';
+      document.body.insertAdjacentHTML("beforeend", html);
+    }
+  </script>
+</html>
