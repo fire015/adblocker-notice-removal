@@ -903,6 +903,14 @@
       ".modal-backdrop"
     ]
   },
+  "topgames": {
+    "matches": [
+      "topgames.cam"
+    ],
+    "elementsToRemove": [
+      ".rts1-urts1"
+    ]
+  },
   "torrentmac": {
     "matches": [
       "torrentmac.net"
